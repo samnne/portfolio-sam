@@ -119,6 +119,14 @@ const ProjectCards = [
         "repo": "https://github.com/samnne/topshop",
         "website": "hi",
         "imgURL": "/topshop.png"
+    },
+    {
+        "name": "Portfolio",
+        "description": "A personal portfolio used to showcase my proficiencies in React, and Tailwind",
+        "code": ["React", "Vite", "CSS", "Tailwind CSS", "Cloudflare", "JavaScript", "HTML5"],
+        "repo": "https://github.com/samnne/portfolio-sam",
+        "website": "portfolio-sam.pages.dev",
+        "imgURL": "/portfolio.png"
     }
 ]
 
