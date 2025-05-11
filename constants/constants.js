@@ -97,7 +97,7 @@ const education = [
 
 const ProjectCards = [
     {
-        "name": "UVic",
+        "name": "UVic Cuisine",
         "description": "A practice project of designing a UVic cuisine website to make hours, locations, and menu's more accessable.",
         "code": ["HTML", "CSS", "Bootstrap"],
         "repo": "https://github.com/samnne/uvic",
