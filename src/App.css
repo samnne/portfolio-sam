@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@theme {
+  --color-primary: #b1e594;
+  --color-primary-dark: #4d6441;
+  --color-secondary: #20886c;
+  --color-secondary-dark: #1b473c;
+  --color-background: #0f1c07;
+  --color-accent: #4ec0d5;
+  --color-accent-dark: #4b737a;
+  --color-text-primary: #e5f6d8;
+  --font-opensans: "Open Sans", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 100ms);
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+body {
+  @apply from-background to-secondary-dark text-text-primary bg-gradient-to-br;
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer components {
+  .gradient {
+    @apply bg-gradient-to-br  from-background to-secondary-dark;
+  }
+  .navbar-icon {
+    @apply relative flex flex-col  justify-center py-1.5 rounded-md h-6 my-2  w-auto mx-1  cursor-pointer  items-center;
+  }
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all top-5 duration-100 scale-0 origin-bottom;
+  }
+}
