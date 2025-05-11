@@ -76,7 +76,7 @@ const codingLanguages = [
     },
     {
         "label": "Canva",
-        "icon": "/react-portfolio/public/canva.svg"
+        "icon": "/react-portfolio/canva.svg"
     }
 ]
 
@@ -102,7 +102,7 @@ const ProjectCards = [
         "code": ["HTML", "CSS", "Bootstrap"],
         "repo": "https://github.com/samnne/uvic",
         "website": "https://samnne.github.io/uvic/html/index.html",
-        "imgURL": "/react-portfolio/public/uvic.png"
+        "imgURL": "/react-portfolio/uvic.png"
     },
     {
         "name": "Nike Redesign",
@@ -110,7 +110,7 @@ const ProjectCards = [
         "code": ["React", "Vite", "Tailwind CSS", "JavaScript"],
         "repo": "https://github.com/samnne/nikedesign-sam",
         "website": "https://nikedesign-sam.pages.dev/",
-        "imgURL": "/react-portfolio/public/nike.png"
+        "imgURL": "/react-portfolio/nike.png"
     },
     {
         "name": "TopShop",
@@ -118,7 +118,7 @@ const ProjectCards = [
         "code": ["JavaScript", "CSS", "EJS", "Node.js", "Express", "Tailwind CSS", "Google Gemini", "MongoDb"],
         "repo": "https://github.com/samnne/topshop",
         "website": "hi",
-        "imgURL": "/react-portfolio/public/topshop.png"
+        "imgURL": "/react-portfolio/topshop.png"
     }
 ]
 
