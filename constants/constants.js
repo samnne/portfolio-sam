@@ -127,6 +127,14 @@ const ProjectCards = [
         "repo": "https://github.com/samnne/portfolio-sam",
         "website": "portfolio-sam.pages.dev",
         "imgURL": "/portfolio.png"
+    },
+    {
+        "name": "Portfolio",
+        "description": "A Sticky Note application that allows users to create, edit, and delete and to be saved locally on their device",
+        "code": ["JavaScript", "HTML", "CSS"],
+        "repo": "https://github.com/samnne/noteApp-sam",
+        "website": "https://samnne.github.io/noteApp-sam/",
+        "imgURL": "/sticky-note.png"
     }
 ]
 
