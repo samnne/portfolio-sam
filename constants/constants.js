@@ -129,7 +129,7 @@ const ProjectCards = [
         "imgURL": "/portfolio.png"
     },
     {
-        "name": "Portfolio",
+        "name": "Sticky Notes",
         "description": "A Sticky Note application that allows users to create, edit, and delete and to be saved locally on their device",
         "code": ["JavaScript", "HTML", "CSS"],
         "repo": "https://github.com/samnne/noteApp-sam",
