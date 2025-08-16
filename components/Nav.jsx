@@ -1,6 +1,8 @@
+
 import { navLinks } from "../constants/constants";
 
 const Nav = () => {
+
   function toggleCollapse() {
     const content = document.getElementById(`navLinks`);
     //content.classList.toggle("hidden")
@@ -12,6 +14,18 @@ const Nav = () => {
     }
   }
 
+  function handleActiveLink(e, index) {
+    const button = document.querySelectorAll(`#active-links`)
+
+    button.forEach(b => {
+
+      if (b.classList.contains(index)){
+        b.classList.toggle("bg-secondary")
+      } else {
+        b.classList.remove("bg-secondary")
+      }
+    })
+  }
   return (
     <header className="fixed z-50 pt-5 w-full fixed-top gradient shadow-lg shadow-gray-950 min-lg:shadow-none min-lg:bg-none">
       <nav className="flex justify-center max-lg:justify-between px-5 text-primary">
@@ -19,6 +33,7 @@ const Nav = () => {
           {navLinks.map((item) => {
             return (
               <a
+                key={item.label}
                 href={item.href}
                 role="button "
                 className="focus:bg-secondary not-focus:hover:bg-[#4b737a50] text-xl  cursor-pointer transition-all duration-200 ease-in-out text-text-primary px-5 py-2 rounded-full "
@@ -46,14 +61,21 @@ const Nav = () => {
         id="navLinks"
         className="overflow-hidden mt-5 max-h-0 transition-all peer-checked:max-h-full duration-300 ease-in-out"
       >
-        <ul className="gradient shadow-md shadow-gray-950 border-secondary-dark">
-          {navLinks.map((item) => {
+        <ul className="gradient shadow-md  shadow-gray-950 border-secondary-dark">
+          {navLinks.map((item, index) => {
             return (
               <li
-                className="text-xl first:bg-secondary not-first:hover:bg-[#4b737a50] cursor-pointer transition-all duration-200 ease-in-out text-text-primary px-5 py-2 w-full "
+                className="text-xl   not-first:hover:bg-[#4b737a50] text-text-primary  w-full "
                 key={item.label}
               >
-                <a className="inline-block w-full" href={item.href}>
+                <a
+                  role="button"
+
+                  id={`active-links`}
+                  onClick={(e) => handleActiveLink(e, index)}
+                  className={`inline-block ${index} hover:bg-[#4b737a50] text-xl cursor-pointer transition-all duration-200 ease-in-out px-2 py-2 text-text-primary  w-full`}
+                  href={item.href}
+                >
                   {item.label}
                 </a>
               </li>

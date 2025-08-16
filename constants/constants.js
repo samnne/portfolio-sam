@@ -114,27 +114,27 @@ const ProjectCards = [
     },
     {
         "name": "TopShop",
-        "description": "A Shopping List CRUD, REST, Mongodb, and Express application that utilizes google gemini to generate price ranges. ",
+        "description": "A Full Stack Shopping List REST Api, Mongodb, and Express application that utilizes google gemini to generate price ranges.",
         "code": ["JavaScript", "CSS", "EJS", "Node.js", "Express", "Tailwind CSS", "Google Gemini", "MongoDb"],
         "repo": "https://github.com/samnne/topshop",
-        "website": "hi",
+        "website": "https://topshop-t5gv.onrender.com/login",
         "imgURL": "/topshop.png"
     },
+    // {
+    //     "name": "Portfolio",
+    //     "description": "A personal portfolio used to showcase my proficiencies in React, and Tailwind",
+    //     "code": ["React", "Vite", "CSS", "Tailwind CSS", "Cloudflare", "JavaScript", "HTML5"],
+    //     "repo": "https://github.com/samnne/portfolio-sam",
+    //     "website": "portfolio-sam.pages.dev",
+    //     "imgURL": "/portfolio.png"
+    // },
     {
-        "name": "Portfolio",
-        "description": "A personal portfolio used to showcase my proficiencies in React, and Tailwind",
-        "code": ["React", "Vite", "CSS", "Tailwind CSS", "Cloudflare", "JavaScript", "HTML5"],
-        "repo": "https://github.com/samnne/portfolio-sam",
-        "website": "portfolio-sam.pages.dev",
-        "imgURL": "/portfolio.png"
-    },
-    {
-        "name": "Sticky Notes",
-        "description": "A Sticky Note application that allows users to create, edit, and delete and to be saved locally on their device",
-        "code": ["JavaScript", "HTML", "CSS"],
-        "repo": "https://github.com/samnne/noteApp-sam",
-        "website": "https://samnne.github.io/noteApp-sam/",
-        "imgURL": "/sticky-note.png"
+        "name": "Movie App",
+        "description": "A movie application which allows user to search for any given movie saved to computers local storage. Designed with React",
+        "code": ["JavaScript", "HTML", "CSS", "React", "Redux", "Vite"],
+        "repo": "https://github.com/samnne/movieApp",
+        "website": "https://samnne.github.io/movieApp",
+        "imgURL": "/movieApp.png"
     }
 ]
 

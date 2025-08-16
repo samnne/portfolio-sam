@@ -17,7 +17,7 @@ const Education = () => {
             key={school.school}
             className="flex flex-col items-center mt-12 text-center"
           >
-            <i class="fa-solid fa-graduation-cap text-4xl"></i>
+            <i className="fa-solid fa-graduation-cap text-4xl"></i>
             <h3 className="min-md:text-4xl text-2xl font-bold font-inter tracking-widest text-primary leading-12 min-sm:leading-24">
               {school.credential}
             </h3>

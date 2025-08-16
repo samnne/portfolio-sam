@@ -11,7 +11,7 @@ const ProjectCard = ({ name, description, code, repo, website, imgURL }) => {
         />
       </div>
       <h3 className="capitalize font-medium mt-4 text-5xl font-inter">
-        {name !== "TopShop" ? name : name + " - in progress"}
+        {name}
       </h3>
       <p className="mt-4 font-medium max-w-sm my-4 capitalize">{description}</p>
       <div className="flex justify-center items-center flex-wrap max-w-md gap-2">
@@ -33,7 +33,7 @@ const ProjectCard = ({ name, description, code, repo, website, imgURL }) => {
         <Button
           label="Website"
           icon={`fa-solid fa-arrow-up-right-from-square`}
-          link={website !== "hi" ? website : "/"}
+          link={website}
         />
       </div>
     </div>

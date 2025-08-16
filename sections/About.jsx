@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <h1 className="text-center capitalize font-extrabold text-6xl min-lg:text-8xl text-shadow-black text-shadow-lg z-10 relative">
+      <h1 className="text-center animate-wiggle capitalize font-extrabold text-6xl min-lg:text-8xl text-shadow-black text-shadow-lg z-10 relative">
         A quick note
       </h1>
       <section
