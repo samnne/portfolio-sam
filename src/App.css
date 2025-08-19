@@ -43,4 +43,7 @@ html {
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all top-5 duration-100 scale-0 origin-bottom;
   }
+  .sidebar-tooltip-to-top {
+    @apply absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all bottom-6 duration-100 scale-0 origin-bottom;
+  }
 }

@@ -1,3 +1,8 @@
+import uvicIMG from "../src/assets/uvic.png"
+import movieIMG from "../src/assets//movieApp.png"
+import topShopImg from "../src/assets//topshop.png"
+import nike from "../src/assets//nike.png"
+import canva from "../src/assets//canva.svg"
 const navLinks = [
     {
         label: "Home",
@@ -76,7 +81,7 @@ const codingLanguages = [
     },
     {
         "label": "Canva",
-        "icon": "/canva.svg"
+        "icon": canva
     }
 ]
 
@@ -102,7 +107,7 @@ const ProjectCards = [
         "code": ["HTML", "CSS", "Bootstrap"],
         "repo": "https://github.com/samnne/uvic",
         "website": "https://samnne.github.io/uvic/html/index.html",
-        "imgURL": "/uvic.png"
+        "imgURL": uvicIMG
     },
     {
         "name": "Nike Redesign",
@@ -110,7 +115,7 @@ const ProjectCards = [
         "code": ["React", "Vite", "Tailwind CSS", "JavaScript"],
         "repo": "https://github.com/samnne/nikedesign-sam",
         "website": "https://nikedesign-sam.pages.dev/",
-        "imgURL": "/nike.png"
+        "imgURL": nike
     },
     {
         "name": "TopShop",
@@ -118,7 +123,7 @@ const ProjectCards = [
         "code": ["JavaScript", "CSS", "EJS", "Node.js", "Express", "Tailwind CSS", "Google Gemini", "MongoDb"],
         "repo": "https://github.com/samnne/topshop",
         "website": "https://topshop-t5gv.onrender.com/login",
-        "imgURL": "/topshop.png"
+        "imgURL": topShopImg
     },
     // {
     //     "name": "Portfolio",
@@ -134,7 +139,7 @@ const ProjectCards = [
         "code": ["JavaScript", "HTML", "CSS", "React", "Redux", "Vite"],
         "repo": "https://github.com/samnne/movieApp",
         "website": "https://samnne.github.io/movieApp",
-        "imgURL": "/movieApp.png"
+        "imgURL": movieIMG
     }
 ]
 

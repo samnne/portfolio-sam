@@ -42,7 +42,7 @@ function App() {
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
-            <span className="sidebar-tooltip group-hover:scale-100">
+            <span className="sidebar-tooltip-to-top group-hover:scale-100">
               Linkedin
             </span>
           </div>
@@ -50,13 +50,13 @@ function App() {
             <a href="https://github.com/samnne" target="none">
               <i className="fa-brands fa-github"></i>
             </a>
-            <span className="sidebar-tooltip group-hover:scale-100">
+            <span className="sidebar-tooltip-to-top group-hover:scale-100">
               GitHub
             </span>
           </div>
           <div className="navbar-icon group">
             <a href="mailto:samuel.n.echefu@gmail.com">@</a>
-            <span className="sidebar-tooltip group-hover:scale-100">Email</span>
+            <span className="sidebar-tooltip-to-top group-hover:scale-100">Email</span>
           </div>
         </div>
         <p className="text-xl text-md text-accent-dark  text-center pr-5">

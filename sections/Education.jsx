@@ -11,11 +11,12 @@ const Education = () => {
           Education
         </h1>
       </header>
-      {education.map((school) => {
+      {education.map((school, index) => {
         return (
+          <>
           <article
             key={school.school}
-            className="flex flex-col items-center mt-12 text-center"
+            className="flex flex-col items-center  text-center"
           >
             <i className="fa-solid fa-graduation-cap text-4xl"></i>
             <h3 className="min-md:text-4xl text-2xl font-bold font-inter tracking-widest text-primary leading-12 min-sm:leading-24">
@@ -28,6 +29,11 @@ const Education = () => {
               {school.school}
             </p>
           </article>
+          {
+            index == 0 &&
+            <div className="h-50 relative border my-8"></div>
+          }
+          </>
         );
       })}
     </section>

@@ -26,7 +26,7 @@ const Projects = () => {
         </h2>
       </header>
 
-      <div className="grid grid-cols-1 min-md:grid-cols-2 min-lg:grid-cols-3 gap-5 mt-20">
+      <div className="grid grid-cols-1 min-md:grid-cols-2  gap-5 mt-20">
         {ProjectCards.map((project) => {
           return <ProjectCard key={project.name} {...project} />;
         })}
