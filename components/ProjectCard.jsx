@@ -3,11 +3,11 @@ import Button from "./Button";
 const ProjectCard = ({ name, description, code, repo, website, imgURL }) => {
   return (
     <div className="flex justify-between shadow-lg text-secondary shadow-black items-center flex-col p-3 rounded-4xl text-center bg-neutral-900 gap-2 ">
-      <div className="max-w-2xl rounded-xl p-2 h-auto aspect-video  ">
+      <div className="max-w-2xl rounded-xl p-2 h-auto aspect-video object-contain  ">
         <img
           src={imgURL}
           alt=""
-          className="rounded-2xl w-full h-full border-2 border-secondary shadow-lg shadow-black"
+          className="rounded-2xl  w-full h-full border-2 border-secondary shadow-lg shadow-black"
         />
       </div>
       <h3 className="capitalize font-medium mt-4 text-5xl font-inter">

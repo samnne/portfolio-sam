@@ -21,6 +21,9 @@ function App() {
           <About />
         </section>
         <section className="py-10 px-5 ">
+          Work Experience!
+        </section>
+        <section className="py-10 px-5 ">
           <Skills />
         </section>
         <section className="py-10 px-5 ">

@@ -13,15 +13,14 @@ const About = () => {
             Hey! I'm <span className="text-accent">SAM</span>
           </h2>
           <p className="capitalize  text-xl mt-4 lg:max-w-2xl text-accent-dark  ">
-            I am Samuel Echefu, A computer science student web developer based
-            in Victoria, BC. With 6 months into web development and 4+ years of
-            coding. I look to specialize into creating clean, responsive, ready
-            for production websites & landing pages Utilizing HTML, CSS,
-            JavaScript, Reactjs, and Python.
+            I am Samuel Echefu, A computer science student and full stack developer based in Victoria, BC. With my 1 year 
+            into Web/Full Stack development and 5+ Years of Programming. I've built full end-to-end projects aiming to 
+            solve the little problems people face. I Utilize the Reactjs Framework, ExpressJs, Firebase, MongoDB, Tailwind CSS, 
+            and many more tools to ship my projects. 
           </p>
           <p className="capitalize text-xl max-w-2xl mt-4 lg:max-w-xl text-accent-dark ">
-            As of now I am entering my second year in computer science. I'm open
-            to freelance opporunites. I'm very independent, quick learner,
+            As of now I am in my second year of computer science seeking CO-OP education opporunites for 2026 Spring or 2026 Summer. Currently 
+            I am open to possible small jobs to enhance fellow codebases. I'm a quick learner,
             efficient communicator, and I take steps forward every day to enrich
             my capabilities as a developer
           </p>
