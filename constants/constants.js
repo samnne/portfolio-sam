@@ -95,11 +95,11 @@ const education = [
     duration: "2024–2028",
     credential: "Bachelor's Degree",
   },
-  {
-    school: "Ernest Manning High School",
-    duration: "2021–2024",
-    credential: "High School Diploma",
-  },
+  // {
+  //   school: "Ernest Manning High School",
+  //   duration: "2021–2024",
+  //   credential: "High School Diploma",
+  // },
 ];
 
 const ProjectCards = [

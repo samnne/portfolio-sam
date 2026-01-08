@@ -1,5 +1,5 @@
 import "./App.css";
-
+import proper_seer from "../src/assets/proper_seer.png";
 import {
   Home,
   About,
@@ -9,6 +9,7 @@ import {
   Contact,
   Education,
 } from "../sections";
+import WorkExperience from "../sections/WorkExperience";
 function App() {
   return (
     <>
@@ -20,8 +21,9 @@ function App() {
         <section className=" min-lg:px-25 px-10">
           <About />
         </section>
-        <section className="py-10 px-5 ">
-          Work Experience!
+        <section className=" relative">
+          <WorkExperience />
+         
         </section>
         <section className="py-10 px-5 ">
           <Skills />
@@ -42,6 +44,7 @@ function App() {
             <a
               href="https://www.linkedin.com/in/samuel-echefu-251a21336/"
               target="none"
+              className="group-hover:scale-120 transition-all duration-300"
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
@@ -50,7 +53,11 @@ function App() {
             </span>
           </div>
           <div className="navbar-icon group">
-            <a href="https://github.com/samnne" target="none">
+            <a
+              href="https://github.com/samnne"
+              target="none"
+              className="group-hover:scale-120 transition-all duration-300"
+            >
               <i className="fa-brands fa-github"></i>
             </a>
             <span className="sidebar-tooltip-to-top group-hover:scale-100">
@@ -58,8 +65,15 @@ function App() {
             </span>
           </div>
           <div className="navbar-icon group">
-            <a href="mailto:samuel.n.echefu@gmail.com">@</a>
-            <span className="sidebar-tooltip-to-top group-hover:scale-100">Email</span>
+            <a
+              href="mailto:samuel.n.echefu@gmail.com"
+              className="group-hover:scale-120 transition-all duration-300"
+            >
+              @
+            </a>
+            <span className="sidebar-tooltip-to-top group-hover:scale-100">
+              Email
+            </span>
           </div>
         </div>
         <p className="text-xl text-md text-accent-dark  text-center pr-5">

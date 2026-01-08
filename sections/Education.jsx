@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="flex flex-col items-center h-screen justify-center"
+      className="flex flex-col gap-5 items-center h-screen justify-center"
     >
       <header className="text-7xl max-sm:text-5xl font-extrabold tracking-wider ">
         <h1 className="text-shadow-black text-shadow-lg z-10 relative">
@@ -29,10 +29,10 @@ const Education = () => {
               {school.school}
             </p>
           </article>
-          {
+          {/* {
             index == 0 &&
             <div className="h-50 relative border my-8"></div>
-          }
+          } */}
           </>
         );
       })}
