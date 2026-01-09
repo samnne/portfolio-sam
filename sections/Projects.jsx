@@ -1,7 +1,10 @@
+import { useGSAP } from "@gsap/react";
 import ProjectCard from "../components/ProjectCard";
 import { ProjectCards } from "../constants/constants";
+import gsap from "gsap";
 
 const Projects = () => {
+
   return (
     <section
       id="projects"
@@ -11,12 +14,12 @@ const Projects = () => {
         <span className="text-shadow-black text-shadow-lg z-10 relative">
           Projects
         </span>
-        
+
       </header>
 
-      <div className="grid grid-cols-1 min-md:grid-cols-2  gap-5 mt-20">
-        {ProjectCards.map((project) => {
-          return <ProjectCard key={project.name} {...project} />;
+      <div className="grid grid-cols-1 ">
+        {ProjectCards.map((project, idx) => {
+          return <ProjectCard key={idx} index={idx} {...project} />;
         })}
       </div>
     </section>

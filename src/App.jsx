@@ -9,11 +9,17 @@ import {
   Contact,
   Education,
 } from "../sections";
+import gsap from "gsap"
 import WorkExperience from "../sections/WorkExperience";
+import { ScrollTrigger } from "gsap/all";
+
+
+gsap.registerPlugin(ScrollTrigger)
+
 function App() {
   return (
     <>
-      <main className="relative">
+      <main className="relative overflow-x-hidden">
         <Nav></Nav>
         <section className="py-10 px-5 ">
           <Home />
@@ -23,12 +29,12 @@ function App() {
         </section>
         <section className=" relative">
           <WorkExperience />
-         
+
         </section>
         <section className="py-10 px-5 ">
           <Skills />
         </section>
-        <section className="py-10 px-5 ">
+        <section className="py-10 ">
           <Projects />
         </section>
         <section className="py-10 px-5 ">

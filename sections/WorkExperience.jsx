@@ -5,11 +5,11 @@ const WorkExperience = () => {
     <section className="h-screen">
       <div className=" flex flex-col mb-5 justify-start items-center ">
         <header className="text-7xl max-sm:text-5xl font-extrabold tracking-wider ">
-          <h1 className="">Work Experience</h1>
+          <h1 className="pl-5">Work Experience</h1>
         </header>
       </div>
-      <article className="flex  cursor-pointer justify-center  text-black w-full  ">
-        <a href="https://www.properseer.com/" target="none" className=" flex flex-col sm:px-12 px-4  gap-12 group">
+      <article className="flex  cursor-pointer justify-center  items-center text-black w-full  ">
+        <a href="https://www.properseer.com/" target="none" className=" flex flex-col justify-center items-center sm:px-12 px-4  gap-12 group">
           <div className=" sm:scale-80   aspect-video group-hover:opacity-100 transition-all duration-300 ease-in-out opacity-80 -z-20">
             <img
               src={proper_seer}

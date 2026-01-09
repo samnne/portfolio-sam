@@ -19,26 +19,26 @@ const Nav = () => {
 
     button.forEach(b => {
 
-      if (b.classList.contains(index)){
-        b.classList.toggle("bg-secondary")
+      if (b.classList.contains(index)) {
+        b.classList.toggle("bg-black")
       } else {
-        b.classList.remove("bg-secondary")
+        b.classList.remove("bg-black")
       }
     })
   }
   return (
-    <header className="fixed z-50 pt-5 w-full fixed-top gradient shadow-lg shadow-gray-950 min-lg:shadow-none min-lg:bg-none">
+    <header className="fixed z-50 pt-5 w-full fixed-top bg-black shadow-lg shadow-gray-950 min-lg:shadow-none min-lg:bg-none">
       <nav className="flex justify-center max-lg:justify-between px-5 text-primary">
-        <ul className="flex justify-center max-lg:hidden gap-2 border gradient shadow-md shadow-gray-950 border-secondary-dark p-1 rounded-full">
+        <ul className="flex justify-center max-lg:hidden gap-2 border bg-black shadow-md shadow-gray-950 border-secondary-dark p-1 rounded-full">
           {navLinks.map((item, index) => {
             return (
               <a
                 key={item.label}
                 href={item.href}
-                onClick={(e)=>handleActiveLink(e, index)}
+                onClick={(e) => handleActiveLink(e, index)}
                 id="active-links"
                 role="button"
-                className={` ${index} hover:bg-[#4b737a50] text-xl  cursor-pointer transition-all duration-200 ease-in-out text-text-primary px-5 py-2 rounded-full `}
+                className={` ${index} hover:bg-white hover:text-black text-xl  cursor-pointer transition-all duration-200 ease-in-out text-text-primary px-5 py-2 rounded-full `}
               >
                 <li className="" key={item.label}>
                   {item.label}

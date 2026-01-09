@@ -28,7 +28,7 @@
   }
 }
 body {
-  @apply from-background to-secondary-dark text-text-primary bg-gradient-to-br;
+  @apply bg-black text-text-primary 
 }
 html {
   scroll-behavior: smooth;
