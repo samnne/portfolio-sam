@@ -1,5 +1,4 @@
 import "./App.css";
-import proper_seer from "../src/assets/proper_seer.png";
 import {
   Home,
   About,
@@ -8,9 +7,9 @@ import {
   Nav,
   Contact,
   Education,
-} from "../sections";
+} from "../sections/index";
 import gsap from "gsap"
-import WorkExperience from "../sections/WorkExperience";
+import WorkExperience from "../sections/WorkExperience.tsx";
 import { ScrollTrigger } from "gsap/all";
 
 
@@ -19,13 +18,14 @@ gsap.registerPlugin(ScrollTrigger)
 function App() {
   return (
     <>
-      <main className="relative overflow-x-hidden">
+      <main className="relative font-google overflow-x-hidden">
         <Nav></Nav>
         <section className="py-10 px-5 ">
           <Home />
         </section>
-        <section className=" min-lg:px-25 px-10">
-          <About />
+        <section className="py-10">
+             <Projects />
+         
         </section>
         <section className=" relative">
           <WorkExperience />
@@ -34,8 +34,8 @@ function App() {
         <section className="py-10 px-5 ">
           <Skills />
         </section>
-        <section className="py-10 ">
-          <Projects />
+        <section className="min-lg:px-25 px-10">
+        <About />
         </section>
         <section className="py-10 px-5 ">
           <Education />

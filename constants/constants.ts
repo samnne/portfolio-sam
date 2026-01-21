@@ -1,24 +1,25 @@
+
 import uPathIMG from "../src/assets/uPath.png";
 import movieIMG from "../src/assets//movieApp.png";
 import topShopImg from "../src/assets//topshop.png";
 import nike from "../src/assets//nike.png";
-
-const navLinks = [
+import type { NavLink } from "../types/global";
+const navLinks: NavLink[] = [
   {
     label: "Home",
     href: "#home",
   },
   {
-    label: "About",
-    href: "#about",
+    label: "Projects",
+    href: "#projects",
   },
   {
     label: "Skills",
     href: "#skills",
   },
   {
-    label: "Projects",
-    href: "#projects",
+    label: "About",
+    href: "#about",
   },
   {
     label: "Education",
@@ -30,7 +31,7 @@ const navLinks = [
   },
 ];
 
-const codingLanguages = [
+const codingLanguages: CodingLanguage[] = [
   {
     label: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
@@ -89,7 +90,7 @@ const codingLanguages = [
   },
 ];
 
-const education = [
+const education: EducationItem[] = [
   {
     school: "University of Victoria (UVic)",
     duration: "2024–2028",
@@ -102,7 +103,9 @@ const education = [
   // },
 ];
 
-const ProjectCards = [
+
+
+const ProjectCards: ProjectCard[] = [
   {
     name: "uPath",
     description:

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Button = ({ label, icon, link }) => {
   return (
     <button className="cursor-default hover:bg-secondary text-secondary transition-all duration-300 ease-in-out  hover:text-text-primary border border-secondary py-2 px-1 rounded-4xl gap-2 flex justify-center items-center">
@@ -18,6 +20,12 @@ const Button = ({ label, icon, link }) => {
       )}
     </button>
   );
+};
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
 
 export default Button;

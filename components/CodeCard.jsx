@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const CodeCard = ({ codeName, icon, index }) => {
   return (
     <div
@@ -8,6 +10,12 @@ const CodeCard = ({ codeName, icon, index }) => {
       <p className="font-semibold px-1">{codeName}</p>
     </div>
   );
+};
+
+CodeCard.propTypes = {
+  codeName: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default CodeCard;

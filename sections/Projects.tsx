@@ -2,9 +2,22 @@ import { useGSAP } from "@gsap/react";
 import ProjectCard from "../components/ProjectCard";
 import { ProjectCards } from "../constants/constants";
 import gsap from "gsap";
-
+import { animate, stagger } from "framer-motion";
+import { motion } from "motion/react";
+import { useEffect } from "react";
 const Projects = () => {
-
+  useEffect(() => {
+    animate(
+      ".whole-card",
+      {
+        opacity: 1,
+        y: [50, 0],
+      },
+      {
+        delay: stagger(1),
+      },
+    );
+  });
   return (
     <section
       id="projects"
@@ -14,14 +27,13 @@ const Projects = () => {
         <span className="text-shadow-black text-shadow-lg z-10 relative">
           Projects
         </span>
-
       </header>
 
-      <div className="grid grid-cols-1 ">
-        {ProjectCards.map((project, idx) => {
+      <motion.div className="grid lg:grid-cols-2 grid-cols-1 ">
+        {ProjectCards.map((project: ProjectCardType, idx: number) => {
           return <ProjectCard key={idx} index={idx} {...project} />;
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };
