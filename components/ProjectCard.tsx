@@ -83,7 +83,9 @@ const ProjectCard = ({
   };
 
   return (
-    <motion.div
+    <a href={website} target="_blank">
+
+     <motion.div
       
       className={` ${name.split(" ")[0]} cursor-pointer h-screen whole-card overflow-hidden `}
     >
@@ -122,9 +124,9 @@ const ProjectCard = ({
             <div className="flex flex-wrap box  items-center gap-2 justify-center ">
               {code.map((c) => {
                 return (
-                  <span className="flex  justify-center items-center shadow-md shadow-black animate-wiggle bg-secondary-dark py-2 px-1 min-sm:py-4 min-sm:px-3 gap-2 rounded-2xl ">
+                  <a className="flex  justify-center items-center shadow-md shadow-black animate-wiggle bg-secondary-dark py-2 px-1 min-sm:py-4 min-sm:px-3 gap-2 rounded-2xl ">
                     {c}
-                  </span>
+                  </a>
                 );
               })}
             </div>
@@ -132,6 +134,7 @@ const ProjectCard = ({
         </motion.section>
       </div>
     </motion.div>
+    </a>
   );
 };
 
