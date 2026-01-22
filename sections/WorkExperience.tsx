@@ -16,8 +16,8 @@ const WorkExperience = () => {
 
   return (
     <section className="h-screen">
-      <div className=" flex flex-col mb-5 justify-start items-center ">
-        <header className="text-7xl max-sm:text-5xl font-extrabold tracking-wider ">
+      <div className=" flex flex-col mb-5 justify-start items-start ">
+        <header className="text-7xl max-sm:text-5xl font-light tracking-wider ">
           <h1 className="pl-5">Work Experience</h1>
         </header>
       </div>
@@ -39,14 +39,14 @@ const WorkExperience = () => {
           </div>
           <motion.div  variants={vars}
               initial="offscreen"
-              whileInView={"onscreen"} className="absolute sm:text-2xl p-4 text-lg text-white text-center font-light leading-6  capitalize">
+              whileInView={"onscreen"} className=" sm:text-2xl p-4 text-lg text-white text-center font-light leading-6  capitalize">
             
               <motion.h1 className="text-3xl -top-15 relative font-bold ">
                 ProperSeer
               </motion.h1>
 
             <motion.p
-             className="w-1/2 relative top-1/2 left-1/2 -translate-1/2"
+             className=""
             >
               I have worked as a frontend developer intern at ProperSeer where I
               contributed to enhancing the app functionality with React and

@@ -5,7 +5,7 @@ const Contact = () => {
       className="grid grid-cols-1  sm:grid-cols-2  justify-center h-screen"
     >
       <header className="min-sm:text-7xl text-5xl flex flex-col items-center  justify-start  leading-20 overflow-x-clip w-full ">
-        <h1 className="text-shadow-black text-shadow-lg z-10  font-bold font-inter tracking-widest ">
+        <h1 className="text-shadow-black text-shadow-lg z-10  font-bold tracking-widest ">
           Contact
           <br/>
           Me!
@@ -21,7 +21,7 @@ const Contact = () => {
           to me via email!
         </p>
         <a href="mailto:samuel.n.echefu@gmail.com" className="flex self-end ">
-          <div className="py-2 px-4 text-xl hover:rounded-xl focus:scale-110 hover:scale-110  font-inter bg-accent-dark  font-bold tracking-wider   shadow shadow-black  cursor-pointer transition-all duration-300 ease-in-out ">
+          <div className="py-2 px-4 text-xl hover:rounded-xl focus:scale-110 hover:scale-110   bg-accent-dark  font-bold tracking-wider   shadow shadow-black  cursor-pointer transition-all duration-300 ease-in-out ">
             Email Me!
           </div>
         </a>

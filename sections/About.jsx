@@ -1,15 +1,15 @@
 const About = () => {
   return (
     <>
-      <h1 className="text-center animate-wiggle capitalize font-extrabold text-6xl min-lg:text-8xl text-shadow-black text-shadow-lg z-10 relative">
+      <h1 className=" capitalize font-light text-7xl max-lg:text-5xl text-shadow-black text-shadow-lg z-10 relative">
         A quick note
-      </h1>
+      </h1> 
       <section
         id="about"
         className="flex py-25 max-lg:flex-col justify-evenly items-center"
       >
-        <div className="font-opensans">
-          <h2 className="text-4xl font-bold tracking-wider font-inter ">
+        <div className="">
+          <h2 className="text-4xl font-bold tracking-wider  ">
             Hey! I'm <span className="text-accent">SAM</span>
           </h2>
           <p className="capitalize  text-xl mt-4 lg:max-w-2xl text-accent-dark  ">

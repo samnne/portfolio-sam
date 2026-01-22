@@ -34,7 +34,7 @@ function App() {
         <section className="py-10 px-5 ">
           <Skills />
         </section>
-        <section className="min-lg:px-25 px-10">
+        <section className=" px-5">
         <About />
         </section>
         <section className="py-10 px-5 ">
