@@ -133,31 +133,21 @@ const ProjectCard = ({
                 {code.map((c) => {
                   return (
                     <motion.a
-                      variants={buttonVars}
-                      initial={{
-                        opacity: 0,
-                        y: 50,
-                        z: 0,
-                        rotateX: "0deg",
-                        rotateZ: 0,
-                      }}
-                      whileInView={{
-                        z: index,
-                        opacity: 1,
-                        y: 0,
-                      }}
+                     
+                      
                       whileHover={{
                         scaleX: 1.1,
                         translateY: -15,
                         rotateX: "15deg",
                         rotateZ: -1,
+                        z: index,
                       }}
                       transition={{
                         delay: index * 0.02,
                         type: "spring",
                         stiffness: 300,
                       }}
-                      className="flex  justify-center items-center shadow-md shadow-black  bg-white text-black  gap-2 p-2 "
+                      className="flex relative justify-center items-center shadow-md shadow-black  bg-white text-black  gap-2 p-2 "
                     >
                       {c}
                     </motion.a>

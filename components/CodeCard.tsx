@@ -23,7 +23,10 @@ const CodeCard = ({
         scaleX: 1.1,
         translateY: -15,
         rotateX: "15deg",
-        rotateZ: -1
+        rotateZ: -1,
+        transition: {
+          delay: 0
+        }
       }}
       transition={{
         delay: index * 0.02,
