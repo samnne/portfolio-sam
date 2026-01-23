@@ -137,6 +137,9 @@ const ProjectCard = ({
                       initial={{
                         opacity: 0,
                         y: 50,
+                        z: 0,
+                        rotateX: "0deg",
+                        rotateZ: 0,
                       }}
                       whileInView={{
                         z: index,
