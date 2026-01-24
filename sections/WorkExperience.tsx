@@ -39,7 +39,7 @@ const WorkExperience = () => {
           </div>
           <motion.div  variants={vars}
               initial="offscreen"
-              whileInView={"onscreen"} className=" sm:text-2xl p-4 text-lg text-white text-center font-light leading-6  capitalize">
+              whileInView={"onscreen"} className="w-1/2 flex flex-col sm:text-2xl p-4 text-lg text-white  font-light leading-6  capitalize">
             
               <motion.h1 className="text-3xl -top-15 relative font-bold ">
                 ProperSeer

@@ -8,17 +8,16 @@ import {
   Contact,
   Education,
 } from "../sections/index";
-import gsap from "gsap"
+
 import WorkExperience from "../sections/WorkExperience.tsx";
-import { ScrollTrigger } from "gsap/all";
 
 
-gsap.registerPlugin(ScrollTrigger)
+
 
 function App() {
   return (
     <>
-      <main className="relative font-google overflow-x-hidden">
+      <main className="relative overflow-hidden font-google overflow-x-hidden">
         <Nav></Nav>
         <section className="py-10 px-5 ">
           <Home />
@@ -34,15 +33,13 @@ function App() {
         <section className="py-10 px-5 ">
           <Skills />
         </section>
-        <section className=" px-5">
-        <About />
-        </section>
+   
         <section className="py-10 px-5 ">
           <Education />
         </section>
-        <section className="py-10 px-5 ">
+        {/* <section className="py-10 px-5 ">
           <Contact />
-        </section>
+        </section> */}
       </main>
       <footer className="flex max-sm:flex-col justify-between h-24 pl-5   items-center">
         <div className="flex justify-center gap-5 text-3xl text-accent-dark items-center">

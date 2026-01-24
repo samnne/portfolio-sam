@@ -1,6 +1,5 @@
-import { useGSAP } from "@gsap/react";
 import Button from "./Button.tsx";
-import gsap from "gsap";
+
 import { useMediaQuery } from "react-responsive";
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
@@ -15,46 +14,6 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  // useGSAP(() => {
-  //   if (!isTablet) {
-
-  //     const timeline = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: `.${name.split(' ')[0]}`,
-  //         start: "top top",
-  //         end: "bottom top",
-  //         scrub: 1,
-  //         pin: true,
-  //       }
-  //     })
-  //     timeline.to(`#box${index} img`, {
-  //       rotateX: 90,
-  //       duration: 1,
-  //       ease: "elastic.inOut"
-  //     }).to(`#box${index} section`, {
-  //       rotateX: 0,
-  //       duration: 1,
-  //       ease: "elastic.inOut"
-  //     })
-  //   } else {
-
-  //     gsap.timeline({
-  //       scrollTrigger:
-  //       {
-  //         trigger: `.${name.split(' ')[0]}`,
-  //         start: "top 25%",
-  //         end: "bottom center",
-  //         scrub: 1,
-  //         pin: true,
-  //       }
-  //     }).to(`#box${index} section`, {
-  //       opacity: 1,
-  //       rotateX: 0
-  //     })
-  //   }
-
-  // }, [])
-
   const scrollIN: Variants = {
     offscreen: {
       opacity: 0,
@@ -66,7 +25,7 @@ const ProjectCard = ({
       transition: {
         duration: 1.2,
         type: "spring",
-        stiffness: 100,
+        stiffness: 300,
         delay: 0.1 * index,
       },
     },
@@ -76,7 +35,7 @@ const ProjectCard = ({
       transition: {
         duration: 1.2,
         type: "spring",
-        stiffness: 10,
+        stiffness: 300,
       },
     },
   };
@@ -124,17 +83,27 @@ const ProjectCard = ({
                   }
                 : ""
             }
-            className="flex bg-black lg:absolute lg:inset-0  w-full flex-col justify-center z-20 md:items-center gap-5  "
+            className="flex bg-black relative lg:absolute lg:inset-0  w-full flex-col justify-center z-20 md:items-center gap-5  "
           >
-            <h3 className="md:text-2xl box text-2xl font-bold px-5">{name}</h3>
+            <motion.div whileHover={{
+              scale: 1.2,
+              x: -5,
+              y: 5,
+              rotateZ: -1,
+              rotateX: 5
+            }} whileTap={{
+              scale: 0.9
+            }} className="absolute right-5 flex bg-white text-black p-2  z-9999 top-5 ">
+            Click Me
+            </motion.div>
+            <h3 className="md:text-2xl  box text-2xl font-bold p-5">{name}</h3>
             <article className="text-md box md:text-xl flex flex-col justify-center items-center gap-5 p-5">
               <p>{description}</p>
               <div className="flex flex-wrap box  items-center gap-2 justify-center ">
                 {code.map((c) => {
                   return (
-                    <motion.a
-                     
-                      
+                    <motion.span
+                      key={c}
                       whileHover={{
                         scaleX: 1.1,
                         translateY: -15,
@@ -150,7 +119,7 @@ const ProjectCard = ({
                       className="flex relative justify-center items-center shadow-md shadow-black  bg-white text-black  gap-2 p-2 "
                     >
                       {c}
-                    </motion.a>
+                    </motion.span>
                   );
                 })}
               </div>

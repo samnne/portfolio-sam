@@ -1,12 +1,11 @@
-import Button from "../components/Button.tsx";
-import { TypeAnimation } from "react-type-animation";
+
 import { motion } from "motion/react";
-import { FaHandshake } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaNewspaper } from "react-icons/fa";
 const Home = () => {
   const variants = {
     button: {
       scale: 1.08,
-      padding: "1rem 2rem",
+      padding: "0.5rem 1rem",
 
       border: "1px solid white",
       background: "black",
@@ -16,37 +15,49 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center"
+      className="min-h-screen m-auto flex flex-col justify-center items-start container "
     >
-      <TypeAnimation
-        sequence={[
-          "Web Developer",
-          1500,
-          "Student Developer",
-          1500,
-          "Front End Designer",
-          1500,
-          "Full Stack Developer",
-          1500,
-        ]}
-        wrapper="h1"
-        repeat={Infinity}
-        speed={25}
-        className="max-sm:text-4xl font-bold text-7xl text-shadow-lg z-10 text-shadow-secondary-dark text-text-primary"
-      />
-      <h2 className="text-3xl mt-8 font-semibold max-sm:text-lg">
-        Hi! I'm Samuel Echefu A Student Web Developer
-      </h2>
-
-      <div className="flex mt-8 max-sm:flex-col-reverse  justify-center items-center gap-8">
-        <Button
-          link="#contact"
-          label="Lets Chat"
-          icon={<FaHandshake />}
-        ></Button>
+      <h1 className="md:text-6xl  text-4xl font-bold">Hi! I'm Sam!</h1>
+      <p className="text-2xl mt-8 font-light sm:w-1/2 max-sm:text-lg">
+        I'm an 19 year old second year University of Victoria Computer Science student based in Victoria, BC. I've
+        previously worked as a Frontend Intern{" "}
         <motion.a
+          className="text-accent underline "
+          whileHover={{
+            fontWeight: "bold",
+          }}
+          transition={{
+            duration: 1,
+          }}
+          href="https://www.properseer.com/"
+        >
+          @ProperSeer
+        </motion.a>
+        , tasked with feature implementation and user design. I'm currently
+        working on a AI powered accessiblity tool <motion.a
+          className="text-accent inline-block w-fit h-fit  relative underline transition-all"
           initial={{
-            padding: "1rem",
+            y: 0
+          }}
+          whileHover={{
+            fontWeight: "bold",
+      
+          }}
+          transition={{
+            type: "spring",
+          
+        
+            bounce: 0.7
+
+          }}
+          href="https://github.com/samnne/u-eyes"
+        >uEyes</motion.a> which is a personal assistant with vision.
+      </p> 
+
+      <div className="flex mt-8 w-full   justify-start items-center gap-4">
+         <motion.a
+          initial={{
+            padding: "0.5rem",
           }}
           href="mailto:samuel.n.echefu@gmail.com"
           variants={variants}
@@ -54,10 +65,43 @@ const Home = () => {
           whileHover={"button"}
           whileFocus={"button"}
           role="button"
-          className="text-lg bg-white p-4 font-medium text-black tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-black"
+          className="text-lg flex justify-center items-center gap-2 bg-white p-4 font-medium text-black tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-black"
         >
-          samuel.n.echefu@gmail.com
+          Github <FaGithub />
         </motion.a>
+         
+         <motion.a
+          initial={{
+            padding: "0.5rem",
+          }}
+          href="https://www.linkedin.com/in/samuel-echefu-251a21336/"
+          variants={variants}
+          whileTap={"button"}
+          whileHover={"button"}
+          whileFocus={"button"}
+          role="button"
+          className="text-lg  flex justify-center items-center gap-2 bg-white p-4 font-medium text-black tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-black"
+        >
+          Linkdin <FaLinkedin/>
+        </motion.a>
+         
+         <motion.a
+          initial={{
+            padding: "0.5rem",
+          }}
+          href="mailto:samuel.n.echefu@gmail.com"
+          variants={variants}
+          whileTap={"button"}
+          whileHover={"button"}
+          whileFocus={"button"}
+          role="button"
+          className="text-lg  flex justify-center items-center gap-2 bg-white p-4 font-medium text-black tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-black"
+        >
+          Resume <FaNewspaper />
+        </motion.a>
+        
+        
+       
       </div>
     </section>
   );

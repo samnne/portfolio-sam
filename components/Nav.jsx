@@ -19,7 +19,7 @@ const Nav = () => {
   }
   useEffect(() => {
     setIsAnimated((prev) => (isTablet ? prev : false));
-  }, isTablet);
+  }, [isTablet]);
 
   function handleActiveLink(e, index) {
     const button = document.querySelectorAll(`#active-links`);
@@ -33,7 +33,7 @@ const Nav = () => {
     });
   }
   return (
-    <header className="fixed bg-black z-50 py-4 w-full fixed-top  shadow-lg shadow-gray-950 lg:shadow-none max-sm:bg-black lg:bg-none">
+    <header className="fixed max-lg:bg-black z-50 py-4 w-full fixed-top  shadow-lg shadow-gray-950 lg:shadow-none max-sm:bg-black lg:bg-none">
       <nav className="flex  justify-center max-lg:justify-between px-5 text-primary">
         <motion.ul
           variants={{}}
@@ -77,9 +77,20 @@ const Nav = () => {
             );
           })}
         </motion.ul>
-        <p className="hidden  max-lg:block cursor-pointer py-1 px-2 text-3xl text-white rounded-full duration-300 transition-colors">
-          <span className="font-bold tracking-widest">SAM</span>
-        </p>
+
+        <motion.p
+          whileTap={{
+            scale: 0.8,
+          }}
+          whileHover={{
+            scale: 1.1,
+          }}
+          className="hidden  max-lg:block cursor-pointer py-1 px-2 text-3xl text-white rounded-full duration-300 transition-colors"
+        >
+          <a role="button" href="#home" className="font-bold tracking-widest">
+            SAM
+          </a>
+        </motion.p>
         <motion.a
           role="button"
           whileTap={{
@@ -109,6 +120,7 @@ const Nav = () => {
           {navLinks.map((nav) => {
             return (
               <motion.a
+                key={nav.href}
                 href={nav.href}
                 whileHover={{
                   background: "rgba(255,255,255,0.3)",

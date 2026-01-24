@@ -2,19 +2,19 @@ import { motion, useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 
 const About = () => {
-  const [scope, animate] = useAnimate()
-  const inView = useInView(scope)
-  useEffect(
-    ()=>{
-      animate(".child", {
+  const [scope, animate] = useAnimate();
+  const inView = useInView(scope);
+  useEffect(() => {
+    animate(
+      ".child",
+      {
         y: [50, 0],
-        
-      }, {
-        
-        delayChildren: 0.5
-      })
-    }, [inView]
-  )
+      },
+      {
+        delayChildren: 0.5,
+      },
+    );
+  }, [inView]);
   return (
     <>
       <h1 className=" capitalize font-light text-7xl max-lg:text-5xl text-shadow-black text-shadow-lg z-10 relative">
@@ -33,10 +33,24 @@ const About = () => {
             },
           }}
           ref={scope}
-          className=""
+          className="flex flex-col"
         >
-          <h2 className=" child text-4xl font-bold tracking-wider  ">
-            Hey! I'm <span className="text-accent">SAM</span>
+          <h2 className=" flex gap-2 child text-4xl font-bold tracking-wider  ">
+            Hey! I'm{" "}
+            <motion.span
+             
+              whileHover={{
+                
+                color: "white",
+                paddingRight: "16px",
+                paddingLeft: "16px",
+                background: "black",
+                border: "1px solid white "
+              }}
+              className="block w-fit h-fit border bg-white cursor-default text-black px-2"
+            >
+              SAM
+            </motion.span>
           </h2>
           <p className=" child capitalize  text-xl mt-4 lg:max-w-2xl text-accent-dark  ">
             I am Samuel Echefu, A computer science student and full stack
