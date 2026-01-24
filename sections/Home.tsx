@@ -26,6 +26,7 @@ const Home = () => {
           whileHover={{
             fontWeight: "bold",
           }}
+          target="_blank"
           transition={{
             duration: 1,
             type: "spring",
@@ -40,6 +41,7 @@ const Home = () => {
         working on a AI powered accessiblity tool{" "}
         <motion.a
           className="text-accent inline-block w-fit h-fit  relative underline transition-all"
+          target="_blank"
           initial={{
             y: 0,
           }}
