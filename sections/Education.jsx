@@ -42,7 +42,7 @@ const Education = () => {
           transition={{
             delayChildren: 0.1,
           }}
-          className="flex flex-col  "
+          className="flex flex-col "
         >
           {education.map((school, index) => {
             return (

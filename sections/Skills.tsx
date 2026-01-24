@@ -5,14 +5,14 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col min-h-screen  justify-evenly items-start"
+      className="flex gap-5 flex-col min-h-screen  justify-evenly items-start"
     >
       <header className="text-7xl relative font-light tracking-wider max-lg:text-5xl overflow-x-clip w-full ">
         <span className="text-shadow-black text-shadow-lg z-10 relative">
           Skills
         </span>
       </header>
-         <p className="text-white md:w-1/3 capitalize text-2xl max-sm:text-lg font-medium">
+         <p className="text-white md:w-1/3  capitalize text-2xl max-sm:text-lg font-medium">
         These are the skills I use on every project and expertise I can bring to your team!
       </p>
     

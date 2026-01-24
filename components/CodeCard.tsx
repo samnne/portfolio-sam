@@ -39,7 +39,7 @@ const CodeCard = ({
       <img
         src={icon}
         alt=""
-        className="w-full object-contain h-full p-5 grayscale"
+        className="w-full object-contain h-full p-5 "
         width={24}
         height={24}
       />

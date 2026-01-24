@@ -1,9 +1,10 @@
-
 import uPathIMG from "../src/assets/uPath.png";
-import movieIMG from "../src/assets//movieApp.png";
+import vstfingers from "../src/assets/VSTfingers.png";
 import topShopImg from "../src/assets//topshop.png";
-import nike from "../src/assets//nike.png";
+
+import macbook from "../src/assets/macbook.png";
 import type { NavLink } from "../types/global";
+import type { CodingLanguage } from "../types/global";
 const navLinks: NavLink[] = [
   {
     label: "Home",
@@ -14,21 +15,25 @@ const navLinks: NavLink[] = [
     href: "#projects",
   },
   {
+    label: "Work Experience",
+    href: "#we",
+  },
+  {
     label: "Skills",
     href: "#skills",
   },
-  {
-    label: "About",
-    href: "#about",
-  },
+  // {
+  //   label: "About",
+  //   href: "#about",
+  // },
   {
     label: "Education",
     href: "#education",
   },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
+  // {
+  //   label: "Contact",
+  //   href: "#contact",
+  // },
 ];
 
 const codingLanguages: CodingLanguage[] = [
@@ -45,12 +50,12 @@ const codingLanguages: CodingLanguage[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
-    label: "VSCode",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  },
-  {
     label: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    label: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
     label: "React JS",
@@ -77,16 +82,24 @@ const codingLanguages: CodingLanguage[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
-    label: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-  },
-  {
     label: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
   {
     label: "Docker",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    label: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    label: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    label: "Linux",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   },
 ];
 
@@ -102,8 +115,6 @@ const education: EducationItem[] = [
   //   credential: "High School Diploma",
   // },
 ];
-
-
 
 const ProjectCards: ProjectCard[] = [
   {
@@ -142,13 +153,13 @@ const ProjectCards: ProjectCard[] = [
     imgURL: topShopImg,
   },
   {
-    name: "Nike Redesign",
+    name: "Macbook Redesign",
     description:
-      "A static and responsive webpage with a clean design and a predictable yet friendly flow.",
-    code: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-    repo: "https://github.com/samnne/nikedesign-sam",
-    website: "https://nikedesign-sam.pages.dev/",
-    imgURL: nike,
+      "A clean, modern, and repsonsive redesign of Apple's own M4 Macbook pro. Using ThreeJs, Gsap, and React",
+    code: ["React", "GSAP", "Tailwind CSS", "ThreeJS"],
+    repo: "https://github.com/samnne/m4macbook",
+    website: "https://samnne.github.io/m4macbook/",
+    imgURL: macbook,
   },
 
   // {
@@ -160,13 +171,20 @@ const ProjectCards: ProjectCard[] = [
   //     "imgURL": "/portfolio.png"
   // },
   {
-    name: "Movie App",
+    name: "VST Fingers",
     description:
-      "A movie application which allows user to search for any given movie saved to computers local storage. Designed with React",
-    code: ["JavaScript", "HTML", "CSS", "React", "Redux", "Vite"],
-    repo: "https://github.com/samnne/movieApp",
-    website: "https://samnne.github.io/movieApp",
-    imgURL: movieIMG,
+      "A Python-to-Max9 Application using machine learning to control VST's by your fingers",
+    code: [
+      "Python3",
+      "Max9",
+      "OpenCV",
+      "MediaPipe",
+      "Machine Learning",
+      "Audio Processing",
+    ],
+    repo: "https://github.com/samnne/vst-fingers",
+    website: "",
+    imgURL: vstfingers,
   },
 ];
 

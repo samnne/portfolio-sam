@@ -50,7 +50,7 @@ const ProjectCard = ({
   };
 
   return (
-    <a href={website} target="_blank">
+    <a href={website ? website: repo } target="_blank">
       <motion.div
         className={` ${name.split(" ")[0]} cursor-pointer  whole-card overflow-hidden `}
       >
