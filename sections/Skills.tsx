@@ -24,7 +24,7 @@ const Skills = () => {
             }
           }
         }}
-      className="max-md:grid self-center flex flex-wrap grid-cols-2 w-full  justify-center text-xl lg:max-w-4xl gap-3 items-center">
+      className="max-md:grid self-center flex flex-wrap grid-cols-2 w-full  justify-center text-sm sm:text-xl lg:max-w-4xl gap-1 sm:gap-3 items-center">
         {codingLanguages.map((lang, index) => {
           return (
             <CodeCard

@@ -34,16 +34,16 @@ const CodeCard = ({
         stiffness: 300
       }}
       style={{ [`--order`]: index }}
-      className={`flex md:flex-col justify-center   md:w-40 md:h-40 w-full h-20 items-center shadow-md shadow-black  ${index % 2 === 0 ? "bg-black border-white border text-white" : "bg-white text-black"} backdrop-blur-md  py-2 px-1 sm:py-5 sm:px-3 gap-2 `}
+      className={`flex md:flex-col justify-center   md:w-40 md:h-40 w-full h-20 items-center shadow-md shadow-black  ${index % 2 === 0 ? "bg-black border-white border text-white" : "bg-white text-black"} backdrop-blur-md  py-2 px-1 sm:py-5 sm:px-3 sm:gap-2 `}
     >
       <img
         src={icon}
         alt=""
-        className="w-full object-contain h-full p-5 "
+        className="w-full  object-contain h-full p-5  "
         width={24}
         height={24}
       />
-      <p className="font-semibold  px-1 w-full  ">{codeName}</p>
+      <p className="font-semibold  px-1 w-full">{codeName}</p>
     </motion.div>
   );
 };
