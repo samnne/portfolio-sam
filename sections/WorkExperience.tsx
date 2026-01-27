@@ -26,31 +26,45 @@ const WorkExperience = () => {
           variants={vars}
           initial="offscreen"
           whileInView={"onscreen"}
-          className="  flex flex-col sm:text-2xl p-4 text-lg text-white  font-light leading-6 gap-8 capitalize"
+          className="flex flex-col sm:text-xl items-center w-1/2 m-auto justify-center p-4 text-lg text-white  font-light leading-6 gap-8 capitalize"
         >
-          <motion.h1 className="text-3xl  relative font-bold ">
-            ProperSeer
-          </motion.h1>
+          <div className="flex flex-col gap-4">
 
-          <motion.p className="">
-            I have worked as a frontend developer intern at ProperSeer where I
-            contributed to enhancing the app functionality with React and
-            Bootstrap. I collaborated with the head developer to implement
-            user-friendly interfaces and enhance the overall user experience.
-          </motion.p>
+
+            <motion.h1 className="text-3xl  relative font-bold ">
+              ProperSeer
+            </motion.h1>
+
+            <motion.p
+              className="">
+              I have worked as a frontend developer intern at ProperSeer where I
+              contributed to enhancing the app functionality with React and
+              Bootstrap. I collaborated with the head developer to implement
+              user-friendly interfaces and enhance the overall user experience.
+            </motion.p>
+          </div>
         </motion.div>
         <a
           href="https://www.properseer.com/"
           target="none"
-          className="flex  justify-center items-center  gap-12 group"
+          className="flex px-2 justify-center items-center  gap-12 group"
         >
-          <div className=" sm:scale-80   aspect-video transition-all duration-300 ease-in-out  -z-20">
+          <div className=" transition-all duration-300 overflow-hidden ease-in-out  ">
+
             <motion.img
+              initial={{
+                y: 50,
+                scale: 1
+              }}
               whileInView={{
-                opacity: 0.5,
+                opacity: 1,
+                y: 0
+              }}
+              whileHover={{
+                scale: 1.1
               }}
               src={proper_seer}
-              className="aspect-video w-full h-full"
+              className="relative  w-full h-full"
               alt="proper_seer"
             />
           </div>
