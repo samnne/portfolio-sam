@@ -1,10 +1,11 @@
 import uPathIMG from "../src/assets/uPath.png";
 import vstfingers from "../src/assets/VSTfingers.png";
-import topShopImg from "../src/assets//topshop.png";
-
+import topShopImg from "../src/assets/topshop.png";
+import marketQuadIMG from "../src/assets/marketquad.png"
 import macbook from "../src/assets/macbook.png";
 import type { NavLink } from "../types/global";
 import type { CodingLanguage } from "../types/global";
+import type { EducationItem, ProjectCard } from "../types/global.js";
 const navLinks: NavLink[] = [
   {
     label: "Home",
@@ -115,20 +116,37 @@ const education: EducationItem[] = [
   //   credential: "High School Diploma",
   // },
 ];
-
 const ProjectCards: ProjectCard[] = [
+  {
+    name: "MarketQuad",
+    description:
+      "A student-only marketplace built exclusively for the University of Victoria community. Verified UVic students can securely buy and sell items on campus — no external spam, no sketchy strangers.",
+    code: [
+      "React Native",
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "Supabase",
+      "PostgreSQL",
+      "Google Gemini",
+    ],
+    repo: "https://github.com/samnne/marketquad",
+    website: "https://market-quad.com",
+    imgURL: marketQuadIMG,
+  },
   {
     name: "uPath",
     description:
-      "A learning path generator which aims to de-mystify the journey of gaining a new skill.",
+      "An AI-powered learning path generator that breaks down any skill into a clear, structured roadmap — removing the guesswork from self-directed learning.",
     code: [
       "React",
-      "Tailwind",
+      "TypeScript",
+      "Tailwind CSS",
       "Firebase",
       "Firestore",
-      "ExpressJs",
-      "Google Prompt API",
-      "Node.Js",
+      "Express.js",
+      "Node.js",
+      "Google Gemini",
     ],
     repo: "https://github.com/samnne/google_ai_hackathon",
     website: "https://samnne.github.io/google_ai_hackathon/",
@@ -137,49 +155,40 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "TopShop",
     description:
-      "A Full Stack Shopping List REST Api, Mongodb, and Express application that utilizes google gemini to generate price ranges.",
+      "A full-stack shopping list app with a REST API backend. Uses Google Gemini to intelligently generate real-world price estimates for items as you add them.",
     code: [
       "JavaScript",
-      "CSS",
-      "EJS",
       "Node.js",
-      "Express",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "EJS",
       "Tailwind CSS",
       "Google Gemini",
-      "MongoDb",
     ],
     repo: "https://github.com/samnne/topshop",
     website: "https://topshop-t5gv.onrender.com/login",
     imgURL: topShopImg,
   },
-  {
-    name: "Macbook Redesign",
-    description:
-      "A clean, modern, and repsonsive redesign of Apple's own M4 Macbook pro. Using ThreeJs, Gsap, and React",
-    code: ["React", "GSAP", "Tailwind CSS", "ThreeJS"],
-    repo: "https://github.com/samnne/m4macbook",
-    website: "https://samnne.github.io/m4macbook/",
-    imgURL: macbook,
-  },
-
   // {
-  //     "name": "Portfolio",
-  //     "description": "A personal portfolio used to showcase my proficiencies in React, and Tailwind",
-  //     "code": ["React", "Vite", "CSS", "Tailwind CSS", "Cloudflare", "JavaScript", "HTML5"],
-  //     "repo": "https://github.com/samnne/portfolio-sam",
-  //     "website": "portfolio-sam.pages.dev",
-  //     "imgURL": "/portfolio.png"
+  //   name: "Macbook Redesign",
+  //   description:
+  //     "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page — featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
+  //   code: ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"],
+  //   repo: "https://github.com/samnne/m4macbook",
+  //   website: "https://samnne.github.io/m4macbook/",
+  //   imgURL: macbook,
   // },
   {
     name: "VST Fingers",
     description:
-      "A Python-to-Max9 Application using machine learning to control VST's by your fingers",
+      "A camera-to-DAW controller that uses real-time hand tracking to trigger and modulate VST instruments inside Max9 — turning your fingers into a live instrument.",
     code: [
-      "Python3",
-      "Max9",
+      "Python 3",
       "OpenCV",
       "MediaPipe",
-      "Machine Learning",
+      "OSC",
+      "Max9",
       "Audio Processing",
     ],
     repo: "https://github.com/samnne/vst-fingers",

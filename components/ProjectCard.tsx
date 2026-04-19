@@ -1,4 +1,4 @@
-import Button from "./Button.tsx";
+
 
 import { useMediaQuery } from "react-responsive";
 import { motion } from "motion/react";
@@ -25,8 +25,9 @@ const ProjectCard = ({
       transition: {
         duration: 1.2,
         type: "spring",
-        stiffness: 300,
-        delay: 0.1 * index,
+        stiffness: 800,
+        delay: 0.1 ,
+        damping: 100
       },
     },
     tap: {
@@ -35,7 +36,7 @@ const ProjectCard = ({
       transition: {
         duration: 1.2,
         type: "spring",
-        stiffness: 300,
+        stiffness: 800,
       },
     },
   };
@@ -50,7 +51,7 @@ const ProjectCard = ({
   };
 
   return (
-    <a href={website ? website: repo } target="_blank">
+    <a href={website ? website : repo} target="_blank">
       <motion.div
         className={` ${name.split(" ")[0]} cursor-pointer  whole-card overflow-hidden `}
       >
@@ -62,7 +63,7 @@ const ProjectCard = ({
             whileInView={"onscreen"}
             whileTap={"tap"}
             alt={name}
-            className="w-full   lg:object-cover lg:object-center  relative transition-all duration-300 aspect-video "
+            className="w-full   lg:object-contain  lg:object-center  object-contain relative transition-all duration-300 aspect-video "
           />
           <motion.section
             variants={scrollIN}
@@ -83,21 +84,25 @@ const ProjectCard = ({
                   }
                 : ""
             }
-            className="flex bg-black relative lg:absolute lg:inset-0  w-full flex-col justify-center z-20 md:items-center gap-5  "
+            className="flex bg-black relative lg:absolute lg:inset-0  w-full flex-col justify-center z-20  gap-5  "
           >
-            <motion.div whileHover={{
-              scale: 1.2,
-              x: -5,
-              y: 5,
-              rotateZ: -1,
-              rotateX: 5
-            }} whileTap={{
-              scale: 0.9
-            }} className="absolute right-5 flex bg-white text-black p-2  z-9999 top-5 ">
-            Click Me
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                x: -5,
+                y: 5,
+                rotateZ: -1,
+                rotateX: 5,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+              className="absolute right-5 flex  bg-white text-black p-2  z-9999 top-5 "
+            >
+              Click Me
             </motion.div>
             <h3 className="md:text-2xl  box text-2xl font-bold p-5">{name}</h3>
-            <article className="text-md box md:text-xl flex flex-col justify-center items-center gap-5 p-5">
+            <article className="text-md box md:text-xl flex flex-col   gap-5 p-5">
               <p>{description}</p>
               <div className="flex flex-wrap box  items-center gap-2 justify-center ">
                 {code.map((c) => {

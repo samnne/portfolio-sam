@@ -21,7 +21,16 @@ const Projects = () => {
       },
     );
   });
+  const variants = {
+    button: {
+      scale: 1.08,
+      padding: "0.5rem 1rem",
 
+      border: "1px solid #4ec0d5",
+      background: "white",
+      color: "#4ec0d5",
+    },
+  };
   return (
     <section
       id="projects"
@@ -38,14 +47,8 @@ const Projects = () => {
             padding: "1rem",
             background: "white",
           }}
-          whileHover={{
-            scale: 1.08,
-            padding: "1rem 2rem",
-
-            border: "1px solid white",
-            background: "black",
-            color: "white",
-          }}
+          variants={variants}
+          whileHover={"button"}
           href="https://github.com/samnne"
           target="_blank"
         >

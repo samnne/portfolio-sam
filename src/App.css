@@ -36,6 +36,9 @@ html {
   scroll-behavior: smooth;
 }
 @layer components {
+  .button-home{
+    @apply max-sm:text-sm text-lg flex justify-center items-center gap-2 bg-accent p-4 font-medium text-white tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-white;
+  }
   .gradient {
     @apply bg-gradient-to-br  from-background to-secondary-dark;
   }
