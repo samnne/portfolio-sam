@@ -2,11 +2,9 @@ import ProjectCard from "../components/ProjectCard";
 import { ProjectCards } from "../constants/constants";
 
 import { FaGithub } from "react-icons/fa";
-import { animate, stagger } from "framer-motion";
+import { animate, stagger, type Variants } from "framer-motion";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-
-
 
 const Projects = () => {
   useEffect(() => {
@@ -31,16 +29,38 @@ const Projects = () => {
       color: "#4ec0d5",
     },
   };
+  const fadeUp: Variants = {
+    offscreen: { opacity: 0, y: 40 },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+    },
+  };
   return (
     <section
       id="projects"
       className="flex flex-col justify-center items-center"
     >
-     
       <header className="relative text-7xl max-lg:text-4xl  p-8 font-light overflow-x-clip flex items-center justify-between w-full  ">
-        <span className="text-shadow-black text-shadow-lg z-10 relative">
-          Projects
+        <span
+          className="absolute -top-10 left-0 text-[10rem] max-lg:text-[6rem] font-light tracking-widest text-white/[0.03] select-none pointer-events-none leading-none uppercase"
+          aria-hidden
+        >
+          Work
         </span>
+        <motion.div
+          variants={fadeUp}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+        
+          <h2 className="text-6xl max-lg:text-4xl font-light tracking-widest">
+            Projects
+          </h2>
+        </motion.div>
         <motion.a
           className="text-lg flex justify-center items-center gap-4  bg-white p-4 font-medium text-black tracking-wider cursor-pointer transition-all duration-300 ease-in-out hover:text-accent border border-black"
           initial={{

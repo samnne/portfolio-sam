@@ -36,71 +36,66 @@ const navLinks: NavLink[] = [
   //   href: "#contact",
   // },
 ];
-
 const codingLanguages: CodingLanguage[] = [
   {
     label: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicons@1.8.0/!SVG/python.svg",
   },
   {
     label: "HTML5",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/html5/html5-original.svg",
   },
   {
     label: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/css3/css3-original.svg",
   },
   {
     label: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg",
   },
   {
     label: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/typescript/typescript-original.svg",
   },
   {
     label: "React JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/react/react-original.svg",
   },
   {
     label: "Bootstrap",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/bootstrap/bootstrap-original.svg",
   },
   {
     label: "GitHub",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/github/github-original.svg",
   },
   {
     label: "Tailwind",
-    icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/tailwindcss/tailwindcss-plain.svg",
   },
   {
     label: "Express",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/express/express-original.svg",
   },
   {
     label: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mongodb/mongodb-original.svg",
   },
   {
     label: "Firebase",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/firebase/firebase-plain.svg",
   },
   {
     label: "Docker",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/docker/docker-original.svg",
   },
   {
     label: "MySQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mysql/mysql-original.svg",
   },
   {
     label: "PostgreSQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  },
-  {
-    label: "Linux",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/postgresql/postgresql-original.svg",
   },
 ];
 

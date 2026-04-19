@@ -1,41 +1,176 @@
 import { codingLanguages } from "../constants/constants";
-import CodeCard from "../components/CodeCard.tsx";
-import {motion} from "motion/react"
+import { motion, type Variants } from "motion/react";
+
 const Skills = () => {
+  const fadeUp: Variants = {
+    offscreen: { opacity: 0, y: 40 },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+    },
+  };
+
+  const stagger: Variants = {
+    offscreen: {},
+    onscreen: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.05 },
+    },
+  };
+
+  const skillGroups = [
+    {
+      category: "Languages",
+      keys: ["Python", "TypeScript", "JavaScript", "SQL", "R", "HTML5", "CSS"],
+    },
+    {
+      category: "Frameworks",
+      keys: ["React JS", "Next.js", "FastAPI", "Node.js", "Express", "Redux", ".NET Core", "Tailwind", "Bootstrap"],
+    },
+    {
+      category: "Databases & Cloud",
+      keys: ["Supabase", "Firebase", "Firestore", "MongoDB", "PostgreSQL", "Cloudinary"],
+    },
+    {
+      category: "Tools & Other",
+      keys: ["Docker", "GitHub", "REST APIs", "WebSockets", "Jupyter Notebook", "Google Colab", "UI/UX Design"],
+    },
+  ];
+
+  // Build a lookup map from your existing codingLanguages constant
+  const iconMap = Object.fromEntries(
+    codingLanguages.map((l) => [l.label.toLowerCase(), l.icon])
+  );
+
   return (
     <section
       id="skills"
-      className="flex gap-5 flex-col min-h-screen  justify-evenly items-start"
+      className="flex flex-col min-h-screen justify-center items-center py-24 px-6"
     >
-      <header className="text-7xl relative font-light tracking-wider max-lg:text-5xl overflow-x-clip w-full ">
-        <span className="text-shadow-black text-shadow-lg z-10 relative">
-          Skills
+      <div className="relative w-full ">
+
+        {/* Ghost text */}
+        <span
+          className="absolute -top-10 left-0 text-[10rem] max-lg:text-[6rem] font-light tracking-widest text-white/[0.03] select-none pointer-events-none leading-none uppercase"
+          aria-hidden
+        >
+          Stack
         </span>
-      </header>
-         <p className="text-white md:w-1/3  capitalize text-2xl max-sm:text-lg font-medium">
-        These are the skills I use on every project and expertise I can bring to your team!
-      </p>
-    
-      <motion.div
-        variants={{
-          show: {
-            transition: {
-              delayChildren: 0.1
-            }
-          }
-        }}
-      className="max-md:grid self-center flex flex-wrap grid-cols-2 w-full  justify-center text-sm sm:text-xl lg:max-w-4xl gap-1 sm:gap-3 items-center">
-        {codingLanguages.map((lang, index) => {
-          return (
-            <CodeCard
-              key={lang.label}
-              codeName={lang.label}
-              icon={lang.icon}
-              index={index}
-            />
-          );
-        })}
-      </motion.div>
+
+        {/* Header */}
+        <motion.div
+          variants={fadeUp}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-3">
+            Technical
+          </p>
+          <h2 className="text-6xl max-lg:text-4xl font-light tracking-widest">
+            Skills
+          </h2>
+        </motion.div>
+
+        {/* Skill groups */}
+        <motion.div
+          variants={stagger}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, margin: "-60px" }}
+          className="flex flex-col border-t border-white/10"
+        >
+          {skillGroups.map((group, gi) => (
+            <motion.div
+              key={group.category}
+              variants={fadeUp}
+              className="grid lg:grid-cols-5 grid-cols-1 border-b border-white/10 py-8 gap-6 items-start hover:bg-white/[0.02] transition-colors duration-300"
+            >
+              {/* Category label */}
+              <div className="lg:col-span-1 flex items-start gap-4 pt-1">
+                <span className="text-white/20 font-light text-sm tabular-nums">
+                  0{gi + 1}
+                </span>
+                <p className="text-[11px] tracking-[0.2em] uppercase text-white/40 font-light">
+                  {group.category}
+                </p>
+              </div>
+
+              {/* Icon cards */}
+              <motion.div
+                variants={stagger}
+                className="lg:col-span-4 flex flex-wrap gap-3"
+              >
+                {group.keys.map((key, si) => {
+                  const icon = iconMap[key.toLowerCase()];
+                  const isEven = (gi + si) % 2 === 0;
+
+                  return (
+                    <motion.div
+                      key={key}
+                      variants={{
+                        offscreen: { opacity: 0, y: 12 },
+                        onscreen: {
+                          opacity: 1,
+                          y: 0,
+                          transition: {
+                            delay: si * 0.04,
+                            duration: 0.5,
+                            ease: [0.22, 1, 0.36, 1],
+                          },
+                        },
+                      }}
+                      whileHover={{
+                        scaleX: 1.1,
+                        translateY: -15,
+                        rotateX: "15deg",
+                        rotateZ: -1,
+                        transition: { delay: 0, type: "spring", stiffness: 300 },
+                      }}
+                      whileTap={{ scale: 0.93 }}
+                      className={`flex flex-col justify-center items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 cursor-default
+                        ${isEven
+                          ? "bg-black border border-white text-white"
+                          : "bg-white text-black"
+                        }`}
+                    >
+                      {icon ? (
+                        <img
+                          src={icon}
+                          alt={key}
+                          className="w-full h-full object-contain p-2"
+                        />
+                      ) : (
+                        <span className="text-[10px] tracking-widest uppercase opacity-50 text-center px-1">
+                          {key}
+                        </span>
+                      )}
+                      <p className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1
+                        ${isEven ? "text-white/70" : "text-black/70"}`}
+                      >
+                        {key}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Bottom tagline */}
+        <motion.p
+          variants={fadeUp}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          className="text-white/20 font-light text-sm tracking-widest uppercase mt-12 text-right"
+        >
+          Always learning —
+        </motion.p>
+
+      </div>
     </section>
   );
 };
