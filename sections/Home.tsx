@@ -62,7 +62,7 @@ const Home = () => {
 
               bounce: 0.7,
             }}
-            href="https://github.com/samnne/u-eyes"
+            href="https://market-quad.com"
           >
             MarketQuad
           </motion.a>{" "}
