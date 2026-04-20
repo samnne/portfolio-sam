@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { IoMdArrowDown } from "react-icons/io";
 import me from "../src/assets/me.jpg";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,12 +49,7 @@ const ParralaxScroll = () => {
       { scale: 1, opacity: 1, ease: "power2.out" },
     );
 
-  
-    scrollTl.to(
-      ".parralax h1",
-      { opacity: 0, y: -30, ease: "power1.in" },
-      0, 
-    );
+    scrollTl.to(".parralax h1", { opacity: 0, y: -30, ease: "power1.in" }, 0);
 
     scrollTl.to(".parralax img", {
       x: 1200,
@@ -87,11 +83,19 @@ const ParralaxScroll = () => {
         />
       </div>
 
-      <div
-        className={`absolute bottom-5 text-4xl z-10 ${done ? "animate-bounce" : "animate-none"}`}
+      <motion.div
+      initial={{
+        y: 50,
+        opacity: 0
+      }}
+        animate={{
+          opacity: done ? 1 : 0,
+          y: done ? [50, 0] : 50,
+        }}
+        className={`absolute bottom-25 text-4xl z-10 ${done ? "animate-bounce" : "animate-none"}`}
       >
         <IoMdArrowDown />
-      </div>
+      </motion.div>
     </section>
   );
 };

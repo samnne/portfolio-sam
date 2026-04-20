@@ -43,7 +43,7 @@ html {
     @apply bg-gradient-to-br  from-background to-secondary-dark;
   }
   .navbar-icon {
-    @apply relative flex flex-col text-white  justify-center py-1.5 rounded-md h-6 my-2  w-auto mx-1  cursor-pointer  items-center;
+    @apply relative flex flex-col   justify-center py-1.5 rounded-md h-6 my-2  w-auto mx-1  cursor-pointer  items-center;
   }
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all top-5 duration-100 scale-0 origin-bottom;

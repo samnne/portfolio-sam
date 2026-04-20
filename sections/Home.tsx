@@ -40,10 +40,10 @@ const Home = () => {
       className="min-h-screen m-auto  grid-cols-1 max-sm:mt-20 grid lg:grid-cols-2 justify-center items-center container "
     >
       <div className="flex flex-col  justify-center items-start">
-        <h1 className="md:text-6xl  text-4xl font-bold">Hi! I'm Sam!</h1>
+        <h1 className="md:text-6xl  text-4xl font-bold">Hi, I'm Sam!</h1>
         <p className="text-2xl mt-8 font-light  max-sm:text-lg">
-          I'm an 19 year old second year UVic CS + Software Systems student
-          based in Victoria, BC. I've previously worked as a Frontend Intern{" "}
+          I am a 19 year old, second year CS + Software Systems student at the
+          University of Victoria. I have previously worked as a Frontend Intern{" "}
           <motion.a
             className="text-accent transition-all underline "
             whileHover={{
@@ -60,8 +60,8 @@ const Home = () => {
           >
             @ProperSeer
           </motion.a>
-          , tasked with feature implementation and user design. I'm currently
-          working on a student marketplace,{" "}
+          , tasked with feature implementation and user design. My current
+          project,{" "}
           <motion.a
             className="text-accent inline-block w-fit h-fit  relative underline transition-all"
             target="_blank"
@@ -80,8 +80,8 @@ const Home = () => {
           >
             MarketQuad
           </motion.a>{" "}
-          which provides students a safer community to buy and sell second hand
-          items.
+          is a student marketplace created to provide a safer university-based
+          community to buy and sell second hand items
         </p>
         <div className="flex flex-col max-xl:flex-wrap w-full mt-4 ">
           <h1 className="text-xl lg:text-4xl text-text-primary font-bold">
