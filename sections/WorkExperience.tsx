@@ -52,7 +52,6 @@ const WorkExperience = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-         
           <h2 className="text-6xl max-lg:text-4xl font-light tracking-widest">
             Work Experience
           </h2>
@@ -106,15 +105,21 @@ const WorkExperience = () => {
                 </h3>
 
                 <article className="text-md md:text-xl flex flex-col gap-5 p-5">
-                  <p className="text-white/70 font-light leading-7">
-                    Contributed to enhancing app functionality with React and
-                    Bootstrap, collaborating with the lead developer to
-                    implement user-friendly interfaces and improve cross-device
-                    usability for property managers.
-                  </p>
+                  <ul className="text-white/70 lg:max-w-3/4 font-light leading-7 list-none">
+                    {[
+                      "Collaborated directly with the lead developer to conduct rigorous code analysis, maintaining high-quality standards and modularity across the company’s property management code base.",
+                      "Engineered responsive, accessible user interfaces using React, Redux, and Bootstrap, which significantly enhanced cross-device usability and workflow efficiency for property managers.",
+                      "Bridged frontend components with backend services by handling complex API calls and asynchronous data flows involving SQL Server, C#, and .NET Core.",
+                      "Led the development of the Owner’s Page, providing property owners with centralized tools to manage tenants.",
+                    ].map((item) => (
+                      <li key={item} className="mb-2">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
 
                   {/* Tech tags — identical to ProjectCard code tags */}
-                  <div className="flex flex-wrap items-center gap-2 justify-center">
+                  <div className="flex flex-wrap items-center gap-2 justify-start">
                     {tags.map((tag) => (
                       <motion.span
                         key={tag}
@@ -128,7 +133,7 @@ const WorkExperience = () => {
                           type: "spring",
                           stiffness: 300,
                         }}
-                        className="flex relative justify-center items-center shadow-md shadow-black bg-white text-black gap-2 p-2"
+                        className="flex relative justify-start items-start shadow-md shadow-black bg-white text-black gap-2 p-2"
                       >
                         {tag}
                       </motion.span>

@@ -25,21 +25,32 @@ const Skills = () => {
     },
     {
       category: "Frameworks",
-      keys: ["React JS", "Next.js", "FastAPI", "Node.js", "Express", "Redux", ".NET Core", "Tailwind", "Bootstrap"],
+      keys: [
+        "Nextjs",
+        "React JS",
+        "FastAPI",
+        "Node.js",
+        "Express",
+        "Redux",
+        "Zustand",
+        ".NET Core",
+        "Tailwind",
+        "Bootstrap",
+      ],
     },
     {
       category: "Databases & Cloud",
-      keys: ["Supabase", "Firebase", "Firestore", "MongoDB", "PostgreSQL", "Cloudinary"],
+      keys: ["Supabase", "Firebase", "MongoDB", "PostgreSQL", "Cloudinary"],
     },
     {
       category: "Tools & Other",
-      keys: ["Docker", "GitHub", "REST APIs", "WebSockets", "Jupyter Notebook", "Google Colab", "UI/UX Design"],
+      keys: ["Docker", "REST APIs", "GitHub", "Socket.Io", "UI/UX Design"],
     },
   ];
 
   // Build a lookup map from your existing codingLanguages constant
   const iconMap = Object.fromEntries(
-    codingLanguages.map((l) => [l.label.toLowerCase(), l.icon])
+    codingLanguages.map((l) => [l.label.toLowerCase(), l.icon]),
   );
 
   return (
@@ -48,7 +59,6 @@ const Skills = () => {
       className="flex flex-col min-h-screen justify-center items-center py-24 px-6"
     >
       <div className="relative w-full ">
-
         {/* Ghost text */}
         <span
           className="absolute -top-10 left-0 text-[10rem] max-lg:text-[6rem] font-light tracking-widest text-white/[0.03] select-none pointer-events-none leading-none uppercase"
@@ -126,13 +136,18 @@ const Skills = () => {
                         translateY: -15,
                         rotateX: "15deg",
                         rotateZ: -1,
-                        transition: { delay: 0, type: "spring", stiffness: 300 },
+                        transition: {
+                          delay: 0,
+                          type: "spring",
+                          stiffness: 300,
+                        },
                       }}
                       whileTap={{ scale: 0.93 }}
                       className={`flex flex-col justify-center items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 cursor-default
-                        ${isEven
-                          ? "bg-black border border-white text-white"
-                          : "bg-white text-black"
+                        ${
+                          isEven
+                            ? "bg-black border border-white text-white"
+                            : "bg-white text-black"
                         }`}
                     >
                       {icon ? (
@@ -146,7 +161,8 @@ const Skills = () => {
                           {key}
                         </span>
                       )}
-                      <p className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1
+                      <p
+                        className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1
                         ${isEven ? "text-white/70" : "text-black/70"}`}
                       >
                         {key}
@@ -169,7 +185,6 @@ const Skills = () => {
         >
           Always learning —
         </motion.p>
-
       </div>
     </section>
   );

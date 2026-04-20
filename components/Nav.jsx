@@ -33,7 +33,7 @@ const Nav = () => {
     });
   }
   return (
-    <header className="fixed max-lg:bg-black z-50 py-4 w-full fixed-top  shadow-lg shadow-gray-950 lg:shadow-none max-sm:bg-black lg:bg-none">
+    <header className="sticky top-0 max-lg:bg-black z-50 py-4 w-full   shadow-lg shadow-gray-950 lg:shadow-none max-sm:bg-black lg:bg-none">
       <nav className="flex  justify-center max-lg:justify-between px-5 text-primary">
         <motion.ul
           variants={{}}

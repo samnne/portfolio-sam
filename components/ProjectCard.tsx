@@ -103,8 +103,8 @@ const ProjectCard = ({
             </motion.div>
             <h3 className="md:text-2xl  box text-2xl font-bold p-5">{name}</h3>
             <article className="text-md box md:text-xl flex flex-col   gap-5 p-5">
-              <p>{description}</p>
-              <div className="flex flex-wrap box  items-center gap-2 justify-center ">
+              <p className="lg:w-3/4 text-wrap">{description}</p>
+              <div className="flex flex-wrap box  items-center gap-2 justify-start ">
                 {code.map((c) => {
                   return (
                     <motion.span
