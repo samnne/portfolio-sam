@@ -85,7 +85,7 @@ function App() {
           </div>
         </div>
         <p className="text-sm text-md text-white  text-center  pr-2 flex justify-center items-center pt-1">
-          &copy; 2025 Samuel Echefu. All Rights Reserved
+          &copy; 2026 Samuel Echefu. All Rights Reserved
         </p>
       </footer>
     </>
