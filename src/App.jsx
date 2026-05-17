@@ -22,7 +22,7 @@ function App() {
     <>
     <div className="overflow-x-hidden">
 
-      <ParralaxScroll />
+      {/* <ParralaxScroll /> */}
     </div>
         <Nav></Nav>
       <main className=" relative overflow-hidden overflow-x-hidden font-google">

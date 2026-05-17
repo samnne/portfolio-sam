@@ -4,7 +4,9 @@ import topShopImg from "../src/assets/topshop.png";
 import marketQuadIMG from "../src/assets/marketquad.png";
 import macbook from "../src/assets/macbook.png";
 import uEyesIMG from "../src/assets/ueyes.png";
+import uBlog from "../src/assets/ublog.png";
 import type { NavLink } from "../types/global";
+import survey_parser from "../src/assets/survey_parser.png";
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, ProjectCard } from "../types/global.js";
 const navLinks: NavLink[] = [
@@ -189,6 +191,22 @@ const ProjectCards: ProjectCard[] = [
     website: "",
     imgURL: uEyesIMG,
   },
+  {
+    name: "uBlog",
+    description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
+    code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS"],
+    repo: "https://github.com/samnne/blogging-system",
+    website: "",
+    imgURL: uBlog,
+  },
+  {
+    name: "Survey Parser",
+    description: `A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.`,
+    code: ["C", "Memory Management", "Bash", "Git", "Linux"],
+    repo: "https://github.com/samnne/blogging-system",
+    website: "",
+    imgURL: survey_parser,
+  },
 
   {
     name: "TopShop",
@@ -208,15 +226,15 @@ const ProjectCards: ProjectCard[] = [
     website: "https://topshop-t5gv.onrender.com/login",
     imgURL: topShopImg,
   },
-  // {
-  //   name: "Macbook Redesign",
-  //   description:
-  //     "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page — featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
-  //   code: ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"],
-  //   repo: "https://github.com/samnne/m4macbook",
-  //   website: "https://samnne.github.io/m4macbook/",
-  //   imgURL: macbook,
-  // },
+  {
+    name: "Macbook Redesign",
+    description:
+      "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
+    code: ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"],
+    repo: "https://github.com/samnne/m4macbook",
+    website: "https://samnne.github.io/m4macbook/",
+    imgURL: macbook,
+  },
   {
     name: "VST Fingers",
     description:
