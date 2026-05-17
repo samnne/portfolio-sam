@@ -1,0 +1,60 @@
+# Sam Echefu — CS + Software Systems Portfolio
+
+> 19-year-old second-year Computer Science + Software Systems student at the University of Victoria, building applications to foster community and health.
+
+## About
+
+Sam Echefu is a CS + Software Systems student at UVic (2024–2028) with hands-on industry experience as a Frontend Intern. His work centres on mobile development, health tech, accessibility-focused software, and real-time data-driven systems. He is currently seeking Software Engineering internships for Fall 2026.
+
+- Portfolio: https://samnne.github.io/portfolio-sam/
+- GitHub: https://github.com/samnne
+- Email: samuel.n.echefu@gmail.com
+
+## Currently Looking For
+
+- Software Engineering internships (Fall 2026), with a focus on mobile application development
+- Roles in health tech and accessibility-focused software
+- Opportunities to build real-time, data-driven systems that impact user decisions
+
+## Projects
+
+- **MarketQuad**: A secure, student-only marketplace for the University of Victoria community. Enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer campus transactions. Full-stack production system with authentication, real-time interactions, and scalable data management. Stack: React Native, Expo, Next.js, TypeScript, Cloudinary, Prisma, Supabase, PostgreSQL.
+
+- **uEyes**: A real-time assistive vision system for visually impaired users. Streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural conversational queries. Built for low-latency communication and stateful context handling. Stack: React, FastAPI, Firebase, Python, WebSockets, Google Gemini, Tailwind, Docker.
+
+- **uBlog**: A complete CRUD desktop admin blogging system with local storage handling. Tested with the Unit Test framework following DAO protocol. Stack: Python, PyQt6, Unittest, Git, Linux, CSS.
+
+- **Survey Parser**: A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization. Stack: C, Memory Management, Bash, Git, Linux.
+
+- **TopShop**: A full-stack shopping system with an AI-powered estimation engine that generates real-world price predictions as users build lists. Combines a RESTful backend with dynamic data entry. Stack: JavaScript, Node.js, Express.js, MongoDB, Mongoose, EJS, Tailwind CSS, Google Gemini.
+
+- **MacBook Redesign**: A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering and scroll-driven animations. Stack: React, Three.js, GSAP, Tailwind CSS, WebGL.
+
+- **VST Fingers**: A real-time computer vision interface that transforms hand movements into expressive control signals for DAWs. Maps finger motion to MIDI/OSC parameters for touchless interaction with virtual instruments. Applications in creative performance, accessibility, and motor rehabilitation. Stack: Python 3, OpenCV, MediaPipe, OSC, Max9, Audio Processing.
+
+## Work Experience
+
+### ProperSeer — Frontend Intern (May–Sep 2025)
+
+- Collaborated with the lead developer on code analysis, maintaining quality and modularity across the property management codebase
+- Engineered responsive, accessible UIs using React, Redux, and Bootstrap, enhancing cross-device usability for property managers
+- Bridged frontend components with backend services via complex API calls and async data flows with SQL Server, C#, and .NET Core
+- Led development of the Owner's Page, providing property owners with centralised tools to manage tenants
+- Stack: React, Redux, Bootstrap, C#, .NET Core, SQL Server
+
+## Skills
+
+- **Languages:** Python, TypeScript, JavaScript, SQL, R, HTML5, CSS
+- **Frameworks:** Next.js, React, FastAPI, Node.js, Express, Redux, Zustand, .NET Core, Tailwind, Bootstrap
+- **Databases & Cloud:** Supabase, Firebase, MongoDB, PostgreSQL, Cloudinary
+- **Tools & Other:** Docker, REST APIs, GitHub, Socket.IO, UI/UX Design
+
+## Education
+
+**University of Victoria (UVic)** — B.Sc. Computer Science + Software Systems, 2024–2028 (Expected)
+Victoria, BC | Currently 2nd Year
+
+Relevant Coursework:
+- Computer Science: CSC 225/226 Data Structures & Algorithms, CSC 230 Computer Architecture, SENG 265 Software Development Methods
+- Mathematics: MATH 200 Multivariable Calculus, MATH 204 Differential Equations, MATH 122 Discrete Math, MATH 211 Matrix Algebra
+- Statistics: STAT 260 Probability & Statistics I

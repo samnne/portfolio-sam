@@ -1,0 +1,102 @@
+{
+  "name": "Sam Echefu",
+  "title": "CS + Software Systems Student",
+  "age": 19,
+  "year": "2nd Year",
+  "portfolio": "https://samnne.github.io/portfolio-sam/",
+  "email": "samuel.n.echefu@gmail.com",
+  "github": "https://github.com/samnne",
+  "summary": "Second-year Computer Science + Software Systems student at the University of Victoria, building applications to foster community and health. Experienced Frontend Intern with a focus on mobile development, health tech, accessibility, and real-time data-driven systems.",
+  "looking_for": [
+    "Software Engineering internships (Fall 2026) with a focus on mobile application development",
+    "Roles in health tech and accessibility-focused software",
+    "Opportunities to build real-time, data-driven systems that impact user decisions"
+  ],
+  "education": {
+    "institution": "University of Victoria (UVic)",
+    "degree": "B.Sc. Computer Science + Software Systems",
+    "location": "Victoria, BC",
+    "start_year": 2024,
+    "expected_graduation": 2028,
+    "relevant_coursework": {
+      "computer_science": [
+        "CSC 225/226: Data Structures & Algorithms",
+        "CSC 230: Computer Architecture",
+        "SENG 265: Software Development Methods"
+      ],
+      "mathematics": [
+        "MATH 200: Multivariable Calculus",
+        "MATH 204: Differential Equations",
+        "MATH 122: Discrete Math",
+        "MATH 211: Matrix Algebra"
+      ],
+      "statistics": [
+        "STAT 260: Probability & Statistics I"
+      ]
+    }
+  },
+  "work_experience": [
+    {
+      "company": "ProperSeer",
+      "role": "Frontend Intern",
+      "period": "May–Sep 2025",
+      "highlights": [
+        "Collaborated with the lead developer to conduct code analysis, maintaining quality and modularity across the property management codebase",
+        "Engineered responsive, accessible UIs using React, Redux, and Bootstrap, enhancing cross-device usability for property managers",
+        "Bridged frontend components with backend services via complex API calls and async data flows with SQL Server, C#, and .NET Core",
+        "Led development of the Owner's Page, providing property owners with centralised tools to manage tenants"
+      ],
+      "stack": ["React", "Redux", "Bootstrap", "C#", ".NET Core", "SQL Server"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "MarketQuad",
+      "description": "A secure, student-only marketplace for the University of Victoria community. Enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer campus transactions. Full-stack production system handling authentication, real-time interactions, and scalable data management.",
+      "focus": ["community", "security", "full-stack", "mobile"],
+      "stack": ["React Native", "Expo", "Next.js", "TypeScript", "Cloudinary", "Prisma", "Supabase", "PostgreSQL"]
+    },
+    {
+      "name": "uEyes",
+      "description": "A real-time assistive vision system for visually impaired users. Streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural conversational queries. Built for low-latency communication and stateful context handling.",
+      "focus": ["accessibility", "health tech", "AI", "real-time"],
+      "stack": ["React", "FastAPI", "Firebase", "Python", "WebSockets", "Google Gemini", "Tailwind", "Docker"]
+    },
+    {
+      "name": "uBlog",
+      "description": "A complete CRUD desktop admin blogging system with local storage handling. Tested with the Unit Test framework following DAO protocol for best practices.",
+      "focus": ["desktop", "CRUD", "testing"],
+      "stack": ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS"]
+    },
+    {
+      "name": "Survey Parser",
+      "description": "A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.",
+      "focus": ["data processing", "performance", "systems"],
+      "stack": ["C", "Memory Management", "Bash", "Git", "Linux"]
+    },
+    {
+      "name": "TopShop",
+      "description": "A full-stack shopping system with an AI-powered estimation engine that generates real-world price predictions as users build lists. Combines a RESTful backend with dynamic data entry.",
+      "focus": ["full-stack", "AI", "e-commerce"],
+      "stack": ["JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "EJS", "Tailwind CSS", "Google Gemini"]
+    },
+    {
+      "name": "MacBook Redesign",
+      "description": "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
+      "focus": ["frontend", "3D", "animation", "UI/UX"],
+      "stack": ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"]
+    },
+    {
+      "name": "VST Fingers",
+      "description": "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Maps finger motion to MIDI/OSC parameters for touchless interaction with virtual instruments. Applications in creative performance, accessibility, and motor rehabilitation.",
+      "focus": ["computer vision", "accessibility", "real-time", "HCI"],
+      "stack": ["Python 3", "OpenCV", "MediaPipe", "OSC", "Max9", "Audio Processing"]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "TypeScript", "JavaScript", "SQL", "R", "HTML5", "CSS"],
+    "frameworks": ["Next.js", "React", "FastAPI", "Node.js", "Express", "Redux", "Zustand", ".NET Core", "Tailwind", "Bootstrap"],
+    "databases_and_cloud": ["Supabase", "Firebase", "MongoDB", "PostgreSQL", "Cloudinary"],
+    "tools_and_other": ["Docker", "REST APIs", "GitHub", "Socket.IO", "UI/UX Design"]
+  }
+}
