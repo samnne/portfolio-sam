@@ -7,6 +7,8 @@ import uEyesIMG from "../src/assets/ueyes.png";
 import uBlog from "../src/assets/ublog.png";
 import type { NavLink } from "../types/global";
 import survey_parser from "../src/assets/survey_parser.png";
+import proper_seer from "../src/assets/proper_seer.png";
+import aeternum from "../src/assets/aeternum.png"
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, ProjectCard } from "../types/global.js";
 const navLinks: NavLink[] = [
@@ -158,7 +160,7 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "MarketQuad",
     description:
-      "A secure, student-only marketplace built for the University of Victoria community. MarketQuad enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer transactions on campus. Designed as a full-stack production system, it handles authentication, real-time interactions, and scalable data management, with a focus on building reliable, closed-network platforms where user trust and data integrity are critical.",
+      "A secure, student-only marketplace built for the University of Victoria community. MarketQuad enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer transactions on campus. ",
     code: [
       "React Native",
       "Expo",
@@ -176,7 +178,7 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "uEyes",
     description:
-      "A real-time assistive vision system designed to improve independence for visually impaired users. uEyes streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural, conversational queries. Built with low-latency communication and stateful context handling, the system prioritizes human-centered interaction over raw detection, enabling more intuitive understanding of dynamic environments.",
+      "A real-time assistive vision system designed to improve independence for visually impaired users. uEyes streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural, conversational queries.",
     code: [
       "React",
       "FastAPI",
@@ -187,7 +189,7 @@ const ProjectCards: ProjectCard[] = [
       "Tailwind",
       "Docker",
     ],
-    repo: "https://github.com/samnne/uEyes",
+    repo: "https://github.com/samnne/u-eyes",
     website: "",
     imgURL: uEyesIMG,
   },
@@ -203,7 +205,7 @@ const ProjectCards: ProjectCard[] = [
     name: "Survey Parser",
     description: `A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.`,
     code: ["C", "Memory Management", "Bash", "Git", "Linux"],
-    repo: "https://github.com/samnne/blogging-system",
+    repo: "https://github.com/samnne/survey_parser",
     website: "",
     imgURL: survey_parser,
   },
@@ -238,8 +240,7 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "VST Fingers",
     description:
-      "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Using live tracking and gesture recognition, VST Fingers maps finger motion to MIDI/OSC parameters, enabling intuitive, touchless interaction with virtual instruments. The system explores low-latency human-computer interaction, with potential applications in creative performance, accessibility, and motor rehabilitation technologies.",
-    code: [
+      "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Using live tracking and gesture recognition, VST Fingers maps finger motion to MIDI/OSC parameters, enabling intuitive, touchless interaction with virtual instruments. ",    code: [
       "Python 3",
       "OpenCV",
       "MediaPipe",
@@ -253,4 +254,35 @@ const ProjectCards: ProjectCard[] = [
   },
 ];
 
-export { navLinks, codingLanguages, ProjectCards, education };
+
+const jobs: Job[] = [
+  {
+    company: "Aeternum",
+    role: "Frontend Developer (Riipen)",
+    dateRange: "May – Jul 2026",
+    image: aeternum,
+    link: "https://aeternumproject.com/", // swap in the real link
+    bullets: [
+      "Contributed new features to a secure digital legacy platform that lets users create and share moments through photos, documents, and videos with family and friends.",
+      "Implemented a permission-first memory system (Memoria) in TypeScript across a shared codebase, including a typed service layer and Zustand store.",
+      "Built RAG-backed similarity search with a FastAPI and pgvector backend, filtering retrieved chunks by permission scope and relevance.",
+      "Used Figma throughout the design process, adhering to accessibility standards for users with minimal technical literacy.",
+    ],
+    tags: ["TypeScript", "React Native", "FastAPI", "React", "UI/UX Design", "Figma"],
+  },
+  {
+    company: "ProperSeer",
+    role: "Frontend Intern",
+    dateRange: "May – Sep 2025",
+    image: proper_seer,
+    link: "https://www.properseer.com/",
+    bullets: [
+      "Collaborated directly with the lead developer to conduct rigorous code analysis, maintaining high-quality standards and modularity across the company's property management code base.",
+      "Engineered responsive, accessible user interfaces using React, Redux, and Bootstrap, which significantly enhanced cross-device usability and workflow efficiency for property managers.",
+      "Bridged frontend components with backend services by handling complex API calls and asynchronous data flows involving SQL Server, C#, and .NET Core.",
+      "Led the development of the Owner's Page, providing property owners with centralized tools to manage tenants.",
+    ],
+    tags: ["React", "Redux", "Bootstrap", "C#", ".NET Core", "SQL Server"],
+  },
+];
+export { navLinks, codingLanguages, ProjectCards, education, jobs };

@@ -40,11 +40,18 @@ const Skills = () => {
     },
     {
       category: "Databases & Cloud",
-      keys: ["Supabase", "Firebase", "MongoDB", "PostgreSQL", "Cloudinary"],
+      keys: [
+        "Supabase",
+        "Firebase",
+        "MongoDB",
+        "PostgreSQL",
+        "Cloudinary",
+        "Google Cloud Platform",
+      ],
     },
     {
       category: "Tools & Other",
-      keys: ["Docker", "REST APIs", "GitHub", "Socket.Io", "UI/UX Design"],
+      keys: ["Docker", "GitHub", "UI/UX Design", "VSCode", "Gemini API"],
     },
   ];
 
@@ -143,27 +150,23 @@ const Skills = () => {
                         },
                       }}
                       whileTap={{ scale: 0.93 }}
-                      className={`flex flex-col justify-center items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 cursor-default
-                        ${
-                          isEven
-                            ? "bg-black border border-white text-white"
-                            : "bg-white text-black"
-                        }`}
+                      className={`flex flex-col justify-between items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 cursor-default
+    ${isEven ? "bg-black border border-white text-white" : "bg-white text-black"}`}
                     >
                       {icon ? (
                         <img
                           src={icon}
                           alt={key}
-                          className="w-full h-full object-contain p-2"
+                          className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
                         />
                       ) : (
-                        <span className="text-[10px] tracking-widest uppercase opacity-50 text-center px-1">
+                        <span className="flex-1 flex items-center justify-center text-[10px] tracking-widest uppercase opacity-50 text-center px-1">
                           {key}
                         </span>
                       )}
                       <p
-                        className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1
-                        ${isEven ? "text-white/70" : "text-black/70"}`}
+                        className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1 flex-shrink-0
+    ${isEven ? "text-white/70" : "text-black/70"}`}
                       >
                         {key}
                       </p>

@@ -87,20 +87,8 @@ const Education = () => {
                 variants={fadeUp}
                 className="flex flex-col gap-8"
               >
-                {/* School name + duration */}
-                <div className="flex flex-col gap-1 border-l-2 border-white/20 pl-6">
-                  <p className="text-[11px] tracking-[0.25em] uppercase text-white/30">
-                    {school.duration}
-                  </p>
-                  <h3 className="text-3xl max-sm:text-xl font-light tracking-wide text-white">
-                    {school.school}
-                  </h3>
-                  <p className="text-white/50 text-lg font-light tracking-wide mt-1">
-                    {school.credential}
-                  </p>
-                </div>
-
-                {/* Coursework */}
+ 
+            
                 {/* Coursework */}
                 <motion.div
                   variants={fadeUp}
@@ -201,7 +189,7 @@ const Education = () => {
               className="flex flex-col gap-px w-full mt-4 border border-white/10"
             >
               {[
-                { label: "Year", value: "2nd Year" },
+                { label: "Year", value: "3rd Year" },
                 { label: "Degree", value: "B.Sc. Computer Science" },
                 { label: "Location", value: "Victoria, BC" },
                 { label: "Expected", value: "Apr 2028" },

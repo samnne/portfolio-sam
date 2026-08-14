@@ -9,9 +9,11 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 import me from "../src/assets/me.jpg";
+import { useState } from "react";
 const Home = () => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true, amount: 0.5 });
+  const [dir, setDir] = useState(-1)
   const variants = {
     button: {
       scale: 1.08,
@@ -25,7 +27,7 @@ const Home = () => {
 
   const lookingFor = [
     {
-      text: "Software Engineering internships (Fall 2026), with a focus on mobile application development.",
+      text: "Software Engineering internships (Spring 2027).",
     },
     {
       text: "Roles in health tech and accessibility-focused software.",
@@ -42,7 +44,7 @@ const Home = () => {
       <div className="flex flex-col  justify-center items-start">
         <h1 className="md:text-6xl  text-4xl font-bold">Hi, I'm Sam!</h1>
         <p className="text-2xl mt-8 font-light  max-sm:text-lg">
-          I am a 19 year old, second year CS + Software Systems student at the
+          I am a 19 year old, third year CS + Software Systems student at the
           University of Victoria. I have previously worked as a Frontend Intern{" "}
           <motion.a
             className="text-accent transition-all underline "
@@ -56,9 +58,10 @@ const Home = () => {
 
               bounce: 0.7,
             }}
-            href="https://www.properseer.com/"
+            
+            href="https://aeternumproject.com/"
           >
-            @ProperSeer
+            @Aeternum
           </motion.a>
           , tasked with feature implementation and user design. My current
           project,{" "}
@@ -81,7 +84,7 @@ const Home = () => {
             MarketQuad
           </motion.a>{" "}
           is a student marketplace created to provide a safer university-based
-          community to buy and sell second hand items
+          community to buy and sell second hand items.
         </p>
         <div className="flex flex-col max-xl:flex-wrap w-full mt-4 ">
           <h1 className="text-xl lg:text-4xl text-text-primary font-bold">
@@ -89,7 +92,7 @@ const Home = () => {
           </h1>
           <ul className="list-disc lg:text-xl text-sm pl-12 pt-4 gap-2 flex flex-col">
             {lookingFor.map(({ text }) => {
-              return <li>{text}</li>;
+              return <li key={text}>{text}</li>;
             })}
           </ul>
         </div>
@@ -161,11 +164,15 @@ const Home = () => {
           </motion.a>
         </div>
       </div>
-      <div className="w-full h-full max-sm:mt-4 flex justify-center items-center   aspect-auto ">
+      <div className="w-full  h-full max-sm:mt-4 flex justify-center items-center   aspect-auto ">
         <motion.img
           initial={{
             opacity: 0,
             x: 1200,
+          }}
+          whileTap={{
+            scale: 1.1,
+            rotateZ: dir * 5
           }}
           animate={{
             x: isInView && [1200, 0],
@@ -173,9 +180,10 @@ const Home = () => {
           }}
           transition={{
             type: "spring",
-            mass: 0.5,
+            mass: 0.2,
           }}
-          className=" sm:w-100 sm:h-100 h-75 w-75 object-cover border-4  border-accent  rounded-full"
+          onClick={()=> setDir(prev => prev * -1)}
+          className=" sm:w-100 cursor-pointer active:shadow-2xl transition-shadow active:shadow-accent/50 sm:h-100 h-75 w-75 object-cover border-4  border-accent  rounded-full"
           src={me}
           alt=""
         />
