@@ -1,18 +1,10 @@
-import Home from "./Home.tsx"
-import Contact from "./Contact.jsx"
-import Nav from "../components/Nav.jsx"
-import Projects from "./Projects.tsx"
-import Skills from "./Skills.tsx"
-import About from "./About.jsx"
-import Education from "./Education.tsx"
+import Home from "./Home.tsx";
+import Contact from "./Contact.tsx";
+import Nav from "../components/Nav.jsx";
+import Projects from "./Projects.tsx";
+import Skills from "./Skills.tsx";
+import About from "./About.jsx";
+import Education from "./Education.tsx";
 
+export { Home, Contact, Nav, Projects, Skills, About, Education };
 
-export {
-    Home,
-    Contact,
-    Nav,
-    Projects,
-    Skills,
-    About,
-    Education
-}

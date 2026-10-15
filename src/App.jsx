@@ -10,21 +10,17 @@ import {
 } from "../sections/index";
 
 import WorkExperience from "../sections/WorkExperience.tsx";
-import ParralaxScroll from "../sections/ParralaxScroll.js";
 
-import gsap from "gsap"
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   return (
     <>
-    <div className="overflow-x-hidden">
-
-      {/* <ParralaxScroll /> */}
-    </div>
-        <Nav></Nav>
+      <div className="overflow-x-hidden">{/* <ParralaxScroll /> */}</div>
+      <Nav></Nav>
       <main className=" relative overflow-hidden overflow-x-hidden font-google">
         <section className="py-10 px-5 ">
           <Home />
@@ -42,9 +38,9 @@ function App() {
         <section className="py-10 px-5 ">
           <Education />
         </section>
-        {/* <section className="py-10 px-5 ">
+        <section className="py-10 px-5 ">
           <Contact />
-        </section> */}
+        </section>
       </main>
       <footer className="flex  justify-between h-24 pl-5   items-center">
         <div className="flex justify-center gap-1 text-xl text-white  items-center">

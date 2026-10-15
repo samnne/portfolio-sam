@@ -8,7 +8,8 @@ import uBlog from "../src/assets/ublog.png";
 import type { NavLink } from "../types/global";
 import survey_parser from "../src/assets/survey_parser.png";
 import proper_seer from "../src/assets/proper_seer.png";
-import aeternum from "../src/assets/aeternum.png"
+// import ssi from "../src/assets/ssi.png";
+import aeternum from "../src/assets/aeternum.png";
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, ProjectCard } from "../types/global.js";
 const navLinks: NavLink[] = [
@@ -209,7 +210,14 @@ const ProjectCards: ProjectCard[] = [
     website: "",
     imgURL: survey_parser,
   },
-
+  {
+    name: "Simple Shell Interpreter",
+    description: `A shell interpreter written in C that runs built-in commands and any program on the user's PATH, with support for background tasks via system calls for process creation. Includes persistent command history across sessions, git support, and custom data structures for tracking background processes and stored commands.`,
+    code: ["C", "System Calls", "Process Management", "Git", "Linux"],
+    repo: "https://github.com/samnne/ssi",
+    website: "",
+    imgURL: "#",
+  },
   {
     name: "TopShop",
     description:
@@ -240,7 +248,8 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "VST Fingers",
     description:
-      "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Using live tracking and gesture recognition, VST Fingers maps finger motion to MIDI/OSC parameters, enabling intuitive, touchless interaction with virtual instruments. ",    code: [
+      "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Using live tracking and gesture recognition, VST Fingers maps finger motion to MIDI/OSC parameters, enabling intuitive, touchless interaction with virtual instruments. ",
+    code: [
       "Python 3",
       "OpenCV",
       "MediaPipe",
@@ -253,7 +262,6 @@ const ProjectCards: ProjectCard[] = [
     imgURL: vstfingers,
   },
 ];
-
 
 const jobs: Job[] = [
   {
@@ -268,7 +276,14 @@ const jobs: Job[] = [
       "Built RAG-backed similarity search with a FastAPI and pgvector backend, filtering retrieved chunks by permission scope and relevance.",
       "Used Figma throughout the design process, adhering to accessibility standards for users with minimal technical literacy.",
     ],
-    tags: ["TypeScript", "React Native", "FastAPI", "React", "UI/UX Design", "Figma"],
+    tags: [
+      "TypeScript",
+      "React Native",
+      "FastAPI",
+      "React",
+      "UI/UX Design",
+      "Figma",
+    ],
   },
   {
     company: "ProperSeer",
