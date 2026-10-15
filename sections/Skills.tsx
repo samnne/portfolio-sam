@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { codingLanguages } from "../constants/constants";
-import { motion, type Variants } from "motion/react";
+import { motion, AnimatePresence, type Variants } from "motion/react";
+import { getSkillUsage } from "../constants/utils";
 
 const Skills = () => {
+  const [selected, setSelected] = useState<string | null>(null);
   const fadeUp: Variants = {
     offscreen: { opacity: 0, y: 40 },
     onscreen: {
@@ -83,7 +86,7 @@ const Skills = () => {
           className="mb-20"
         >
           <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-3">
-            Technical
+            The 
           </p>
           <h2 className="text-6xl max-lg:text-4xl font-light tracking-widest">
             Skills
@@ -115,65 +118,123 @@ const Skills = () => {
               </div>
 
               {/* Icon cards */}
-              <motion.div
-                variants={stagger}
-                className="lg:col-span-4 flex flex-wrap gap-3"
-              >
-                {group.keys.map((key, si) => {
-                  const icon = iconMap[key.toLowerCase()];
-                  const isEven = (gi + si) % 2 === 0;
+              {/* Icon cards + usage panel */}
+              <div className="lg:col-span-4 flex flex-col gap-4">
+                <motion.div variants={stagger} className="flex flex-wrap gap-3">
+                  {group.keys.map((key, si) => {
+                    const icon = iconMap[key.toLowerCase()];
+                    const isEven = (gi + si) % 2 === 0;
+                    const usage = getSkillUsage(key);
+                    const isSelected = selected === key;
 
-                  return (
-                    <motion.div
-                      key={key}
-                      variants={{
-                        offscreen: { opacity: 0, y: 12 },
-                        onscreen: {
-                          opacity: 1,
-                          y: 0,
-                          transition: {
-                            delay: si * 0.04,
-                            duration: 0.5,
-                            ease: [0.22, 1, 0.36, 1],
+                    return (
+                      <motion.button
+                        key={key}
+                        type="button"
+                        aria-pressed={isSelected}
+                        aria-disabled={usage.length === 0}
+                        aria-label={
+                          usage.length
+                            ? `${key}, used in ${usage.length} ${usage.length === 1 ? "place" : "places"}`
+                            : key
+                        }
+                        onClick={() => {
+                          if (usage.length)
+                            setSelected(isSelected ? null : key);
+                        }}
+                        variants={{
+                          offscreen: { opacity: 0, y: 12 },
+                          onscreen: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                              delay: si * 0.04,
+                              duration: 0.5,
+                              ease: [0.22, 1, 0.36, 1],
+                            },
                           },
-                        },
-                      }}
-                      whileHover={{
-                        scaleX: 1.1,
-                        translateY: -15,
-                        rotateX: "15deg",
-                        rotateZ: -1,
-                        transition: {
-                          delay: 0,
-                          type: "spring",
-                          stiffness: 300,
-                        },
-                      }}
-                      whileTap={{ scale: 0.93 }}
-                      className={`flex flex-col justify-between items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 cursor-default
-    ${isEven ? "bg-black border border-white text-white" : "bg-white text-black"}`}
-                    >
-                      {icon ? (
-                        <img
-                          src={icon}
-                          alt={key}
-                          className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
-                        />
-                      ) : (
-                        <span className="flex-1 flex items-center justify-center text-[10px] tracking-widest uppercase opacity-50 text-center px-1">
-                          {key}
-                        </span>
-                      )}
-                      <p
-                        className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1 flex-shrink-0
-    ${isEven ? "text-white/70" : "text-black/70"}`}
+                        }}
+                        whileHover={{
+                          scaleX: 1.1,
+                          translateY: -15,
+                          rotateX: "15deg",
+                          rotateZ: -1,
+                          transition: {
+                            delay: 0,
+                            type: "spring",
+                            stiffness: 300,
+                          },
+                        }}
+                        whileTap={{ scale: 0.93 }}
+                        className={`relative flex flex-col justify-between items-center w-20 h-20 sm:w-24 sm:h-24 shadow-md shadow-black py-2 px-1 sm:py-3 sm:px-2 gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent
+            ${usage.length ? "cursor-pointer" : "cursor-default"}
+            ${isSelected ? "ring-2 ring-accent" : ""}
+            ${isEven ? "bg-black border border-white text-white" : "bg-white text-black"}`}
                       >
-                        {key}
-                      </p>
+                        {usage.length > 0 && (
+                          <span
+                            aria-hidden
+                            className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-accent text-background text-[10px] font-bold flex items-center justify-center"
+                          >
+                            {usage.length}
+                          </span>
+                        )}
+                        {icon ? (
+                          <img
+                            src={icon}
+                            alt=""
+                            className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
+                          />
+                        ) : (
+                          <span className="flex-1 flex items-center justify-center text-[10px] tracking-widest uppercase opacity-50 text-center px-1">
+                            {key}
+                          </span>
+                        )}
+                        <p
+                          className={`text-[10px] font-semibold tracking-wide text-center w-full truncate px-1 flex-shrink-0
+              ${isEven ? "text-white/70" : "text-black/70"}`}
+                        >
+                          {key}
+                        </p>
+                      </motion.button>
+                    );
+                  })}
+                </motion.div>
+
+                <AnimatePresence initial={false}>
+                  {selected && group.keys.includes(selected) && (
+                    <motion.div
+                      key={selected}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="border border-accent-dark bg-secondary-dark/30 rounded-md p-4">
+                        <p className="text-xs tracking-[0.2em] uppercase text-white/40 mb-3">
+                          {selected} used in
+                        </p>
+                        <ul className="flex flex-wrap gap-2">
+                          {getSkillUsage(selected).map((u) => (
+                            <li key={`${u.kind}-${u.name}`}>
+                              <a
+                                href={u.href}
+                                className="flex items-center gap-2 border border-accent text-accent px-3 py-1.5 text-sm rounded-md hover:bg-accent hover:text-background focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-all duration-300"
+                              >
+                                <span className="text-[10px] tracking-widest uppercase opacity-60">
+                                  {u.kind === "work" ? "Work" : "Project"}
+                                </span>
+                                {u.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </motion.div>
-                  );
-                })}
-              </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </motion.div>
           ))}
         </motion.div>

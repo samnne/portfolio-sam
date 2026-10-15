@@ -8,7 +8,7 @@ import uBlog from "../src/assets/ublog.png";
 import type { NavLink } from "../types/global";
 import survey_parser from "../src/assets/survey_parser.png";
 import proper_seer from "../src/assets/proper_seer.png";
-// import ssi from "../src/assets/ssi.png";
+import ssi from "../src/assets/ssi.png";
 import aeternum from "../src/assets/aeternum.png";
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, ProjectCard } from "../types/global.js";
@@ -46,102 +46,127 @@ const codingLanguages: CodingLanguage[] = [
   {
     label: "Python",
     icon: "https://cdn.jsdelivr.net/npm/devicons@1.8.0/!SVG/python.svg",
+    years: 5,
   },
   {
     label: "HTML5",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/html5/html5-original.svg",
+    years: 4,
   },
   {
     label: "CSS",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/css3/css3-original.svg",
+    years: 4,
   },
   {
     label: "JavaScript",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg",
+    years: 5,
   },
   {
     label: "TypeScript",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/typescript/typescript-original.svg",
+    years: 2,
   },
   {
     label: "React JS",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/react/react-original.svg",
+    years: 3,
   },
   {
     label: "Bootstrap",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/bootstrap/bootstrap-original.svg",
+    years: 3,
   },
   {
     label: "GitHub",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/github/github-original.svg",
+    years: 6,
   },
   {
     label: "Tailwind",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/tailwindcss/tailwindcss-plain.svg",
+    years: 3,
   },
   {
     label: "Express",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/express/express-original.svg",
+    years: 3,
   },
   {
     label: "MongoDB",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mongodb/mongodb-original.svg",
+    years: 2,
   },
   {
     label: "Firebase",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/firebase/firebase-plain.svg",
+    years: 2,
   },
   {
     label: "Docker",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/docker/docker-original.svg",
+    years: 2,
   },
   {
     label: "MySQL",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mysql/mysql-original.svg",
+    years: 1,
   },
   {
     label: "PostgreSQL",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/postgresql/postgresql-original.svg",
+    years: 2,
   },
   {
     label: "SQL",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mysql/mysql-original.svg",
+    years: 1,
   },
   {
     label: "R",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/r/r-original.svg",
+    years: 1,
   },
   {
     label: "Nextjs",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/nextjs/nextjs-line.svg",
+    years: 2,
   },
   {
     label: "FastAPI",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/fastapi/fastapi-original.svg",
+    years: 2,
   },
   {
     label: "Node.js",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/nodejs/nodejs-original.svg",
+    years: 3,
   },
   {
     label: "Redux",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/redux/redux-original.svg",
+    years: 3,
   },
   {
     label: "Zustand",
     icon: "https://files.svgcdn.io/devicon-plain/zustand.png",
+    years: 2,
   },
   {
     label: ".NET Core",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/dotnetcore/dotnetcore-original.svg",
+    years: 1,
   },
   {
     label: "Supabase",
     icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp",
+    years: 1,
   },
   {
     label: "Jupyter Notebook",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/jupyter/jupyter-original.svg",
+    years: 1,
   },
 ];
 
@@ -167,10 +192,13 @@ const ProjectCards: ProjectCard[] = [
       "Expo",
       "Next.js",
       "TypeScript",
+      "GitHub",
       "Cloudinary",
       "Prisma",
       "Supabase",
       "PostgreSQL",
+      "Zustand",
+      "Tailwind",
     ],
     repo: "https://github.com/samnne/marketquad",
     website: "https://market-quad.com",
@@ -182,9 +210,11 @@ const ProjectCards: ProjectCard[] = [
       "A real-time assistive vision system designed to improve independence for visually impaired users. uEyes streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural, conversational queries.",
     code: [
       "React",
+      "Zustand",
       "FastAPI",
       "Firebase",
       "Python",
+      "GitHub",
       "WebSockets",
       "Google Gemini",
       "Tailwind",
@@ -195,9 +225,17 @@ const ProjectCards: ProjectCard[] = [
     imgURL: uEyesIMG,
   },
   {
+    name: "Simple Shell Interpreter",
+    description: `A shell interpreter written in C that runs built-in commands and any program on the user's PATH, with support for background tasks via system calls for process creation. Includes persistent command history across sessions, git support, and custom data structures for tracking background processes and stored commands.`,
+    code: ["C", "System Calls", "Process Management", "Git", "Linux"],
+    repo: "https://github.com/samnne/ssi",
+    website: "",
+    imgURL: ssi,
+  },
+  {
     name: "uBlog",
     description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
-    code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS"],
+    code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS", "GitLab"],
     repo: "https://github.com/samnne/blogging-system",
     website: "",
     imgURL: uBlog,
@@ -205,19 +243,12 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "Survey Parser",
     description: `A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.`,
-    code: ["C", "Memory Management", "Bash", "Git", "Linux"],
+    code: ["C", "Memory Management", "Bash", "Git", "Linux", "GitHub"],
     repo: "https://github.com/samnne/survey_parser",
     website: "",
     imgURL: survey_parser,
   },
-  {
-    name: "Simple Shell Interpreter",
-    description: `A shell interpreter written in C that runs built-in commands and any program on the user's PATH, with support for background tasks via system calls for process creation. Includes persistent command history across sessions, git support, and custom data structures for tracking background processes and stored commands.`,
-    code: ["C", "System Calls", "Process Management", "Git", "Linux"],
-    repo: "https://github.com/samnne/ssi",
-    website: "",
-    imgURL: "#",
-  },
+
   {
     name: "TopShop",
     description:
@@ -228,6 +259,7 @@ const ProjectCards: ProjectCard[] = [
       "Express.js",
       "MongoDB",
       "Mongoose",
+      "GitHub",
       "EJS",
       "Tailwind CSS",
       "Google Gemini",
