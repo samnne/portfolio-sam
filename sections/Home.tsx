@@ -136,7 +136,7 @@ const Home = () => {
             initial={{
               padding: "0.5rem",
             }}
-            href="/portfolio-sam/Samuel_Echefu_Full_Stack_Resume.pdf"
+            href="/Samuel_Echefu_Full_Stack_Resume.pdf"
             variants={variants}
             target="_blank"
             whileTap={"button"}

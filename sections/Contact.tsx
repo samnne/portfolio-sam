@@ -38,7 +38,7 @@ const links = [
   },
   {
     label: "Resume",
-    href: "/portfolio-sam/Samuel_Echefu_Full_Stack_Resume.pdf",
+    href: "/Samuel_Echefu_Full_Stack_Resume.pdf",
     icon: <FaPaperclip />,
   },
 ];

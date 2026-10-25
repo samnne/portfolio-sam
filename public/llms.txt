@@ -6,7 +6,7 @@
 
 Sam Echefu is a CS + Software Systems student at UVic (2024–2028) with hands-on industry experience as a Frontend Intern. His work centres on mobile development, health tech, accessibility-focused software, and real-time data-driven systems. He is currently seeking Software Engineering internships for Fall 2026.
 
-- Portfolio: https://samnne.github.io/portfolio-sam/
+- Portfolio: https://samechefu.com
 - GitHub: https://github.com/samnne
 - Email: samuel.n.echefu@gmail.com
 
