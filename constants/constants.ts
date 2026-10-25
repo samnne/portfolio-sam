@@ -10,6 +10,7 @@ import survey_parser from "../src/assets/survey_parser.png";
 import proper_seer from "../src/assets/proper_seer.png";
 import ssi from "../src/assets/ssi.png";
 import aeternum from "../src/assets/aeternum.png";
+import benny from "../src/assets/benny.png";
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, ProjectCard } from "../types/global.js";
 const navLinks: NavLink[] = [
@@ -205,6 +206,27 @@ const ProjectCards: ProjectCard[] = [
     imgURL: marketQuadIMG,
   },
   {
+    name: "Benny",
+    description:
+      "A receipt-tracking budgeting app that parses grocery receipts and tracks spending by category. Benny analyzes receipt data to show where your money goes and predicts your total for your next trip, sending the estimate as a notification. Built with Java Spring Boot and the Gemini API for receipt parsing, TypeScript with React Native (Expo) on the frontend, and Firestore for storage.",
+
+    code: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "SpringBoot",
+      "Java",
+      "Firebase",
+      "Google Cloud Platform (GCP)",
+      "Zustand",
+      "Tailwind",
+      "CI/CD"
+    ],
+    repo: "https://github.com/samnne/benny",
+    website: "",
+    imgURL: benny,
+  },
+  {
     name: "uEyes",
     description:
       "A real-time assistive vision system designed to improve independence for visually impaired users. uEyes streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural, conversational queries.",
@@ -232,14 +254,14 @@ const ProjectCards: ProjectCard[] = [
     website: "",
     imgURL: ssi,
   },
-  {
-    name: "uBlog",
-    description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
-    code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS", "GitLab"],
-    repo: "https://github.com/samnne/blogging-system",
-    website: "",
-    imgURL: uBlog,
-  },
+  // {
+  //   name: "uBlog",
+  //   description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
+  //   code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS", "GitLab"],
+  //   repo: "https://github.com/samnne/blogging-system",
+  //   website: "",
+  //   imgURL: uBlog,
+  // },
   {
     name: "Survey Parser",
     description: `A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.`,
@@ -249,34 +271,34 @@ const ProjectCards: ProjectCard[] = [
     imgURL: survey_parser,
   },
 
-  {
-    name: "TopShop",
-    description:
-      "A full-stack shopping system with an AI-powered estimation engine that generates real-world price predictions as users build lists. TopShop combines a RESTful backend taking everyday planning into dynamic data entry.",
-    code: [
-      "JavaScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "GitHub",
-      "EJS",
-      "Tailwind CSS",
-      "Google Gemini",
-    ],
-    repo: "https://github.com/samnne/topshop",
-    website: "https://topshop-t5gv.onrender.com/login",
-    imgURL: topShopImg,
-  },
-  {
-    name: "Macbook Redesign",
-    description:
-      "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
-    code: ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"],
-    repo: "https://github.com/samnne/m4macbook",
-    website: "https://samnne.github.io/m4macbook/",
-    imgURL: macbook,
-  },
+  // {
+  //   name: "TopShop",
+  //   description:
+  //     "A full-stack shopping system with an AI-powered estimation engine that generates real-world price predictions as users build lists. TopShop combines a RESTful backend taking everyday planning into dynamic data entry.",
+  //   code: [
+  //     "JavaScript",
+  //     "Node.js",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "Mongoose",
+  //     "GitHub",
+  //     "EJS",
+  //     "Tailwind CSS",
+  //     "Google Gemini",
+  //   ],
+  //   repo: "https://github.com/samnne/topshop",
+  //   website: "https://topshop-t5gv.onrender.com/login",
+  //   imgURL: topShopImg,
+  // },
+  // {
+  //   name: "Macbook Redesign",
+  //   description:
+  //     "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
+  //   code: ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"],
+  //   repo: "https://github.com/samnne/m4macbook",
+  //   website: "https://samnne.github.io/m4macbook/",
+  //   imgURL: macbook,
+  // },
   {
     name: "VST Fingers",
     description:

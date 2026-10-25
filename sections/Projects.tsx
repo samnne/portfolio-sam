@@ -23,7 +23,7 @@ const Projects = () => {
       ".whole-card",
       {
         opacity: 1,
-        y: [50, 0],
+      
       },
       {
         delay: stagger(1),
@@ -41,7 +41,7 @@ const Projects = () => {
     },
   };
   const fadeUp: Variants = {
-    offscreen: { opacity: 0, y: 40 },
+    offscreen: { opacity: 0, y: 0 },
     onscreen: {
       opacity: 1,
       y: 0,

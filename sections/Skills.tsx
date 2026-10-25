@@ -24,7 +24,7 @@ const Skills = () => {
   const skillGroups = [
     {
       category: "Languages",
-      keys: ["Python", "TypeScript", "JavaScript", "SQL", "R", "HTML5", "CSS"],
+      keys: ["Python", "TypeScript", "JavaScript", "SQL", "R", "C","HTML5", "CSS"],
     },
     {
       category: "Frameworks",
@@ -54,7 +54,7 @@ const Skills = () => {
     },
     {
       category: "Tools & Other",
-      keys: ["Docker", "GitHub", "UI/UX Design", "VSCode", "Gemini API"],
+      keys: ["Docker", "GitHub", "VSCode", "Gemini API", "Linux", "Git", "GitLab"],
     },
   ];
 
@@ -91,6 +91,7 @@ const Skills = () => {
           <h2 className="text-6xl max-lg:text-4xl font-light tracking-widest">
             Skills
           </h2>
+          <span className="text-gray-500 text-sm">Click on skills to see which projects used them!</span>
         </motion.div>
 
         {/* Skill groups */}

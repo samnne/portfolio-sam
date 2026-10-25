@@ -21,7 +21,7 @@ function App() {
     <>
       <div className="overflow-x-hidden">{/* <ParralaxScroll /> */}</div>
       <Nav></Nav>
-      <main className=" relative overflow-hidden overflow-x-hidden font-google">
+      <main className="bg-linear-to-b to-black via-accent/15 from-black relative overflow-hidden overflow-x-hidden font-google">
         <section className="py-10 px-5 ">
           <Home />
         </section>

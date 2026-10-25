@@ -27,6 +27,9 @@ const Education = () => {
         "CSC 225/226: Data Structures & Algorithms",
         "CSC 230: Computer Architecture",
         "SENG 265: Software Development Methods",
+        "SENG 365: Software Systems Development",
+        "CSC 360: Operating Systems",
+        "CSC 321: Introduction to Artificial Intelligence",
       ],
     },
     {

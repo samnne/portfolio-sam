@@ -26,7 +26,7 @@ const ProjectCard = ({
   const scrollIN: Variants = {
     offscreen: {
       opacity: 0,
-      y: 50,
+      y: 0,
     },
     onscreen: {
       opacity: 1,
@@ -112,7 +112,7 @@ const ProjectCard = ({
                     }
                   : undefined
               }
-              className="flex bg-black relative lg:absolute lg:inset-0 description  overflow-y-auto   w-full flex-col justify-start z-20  gap-5  "
+              className="flex bg-black lg:p-10 xl:p-15 absolute inset-0 description  overflow-y-auto   w-full flex-col justify-start z-20  gap-5  "
             >
               <a
                 href={website ? website : repo}
@@ -157,7 +157,7 @@ const ProjectCard = ({
                           type: "spring",
                           stiffness: 300,
                         }}
-                        className="flex relative justify-center text-sm  items-center shadow-md shadow-black  bg-white text-black  gap-2 p-2 "
+                        className="flex relative justify-center max-sm:text-xs text-sm  items-center shadow-md shadow-black  bg-white text-black  gap-2 p-2 "
                       >
                         {c}
                       </motion.span>
