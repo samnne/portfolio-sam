@@ -119,8 +119,6 @@ const Home = () => {
 
         </p>
       </section>
-
-
     </header>
 
   )

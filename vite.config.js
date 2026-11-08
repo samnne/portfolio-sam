@@ -19,7 +19,7 @@ export default defineConfig({
     esbuild: {
       drop: ['console', 'debugger'],
     },
-
+    assetsInlineLimit: 8192,
     rollupOptions: {
       output: {
         manualChunks(id) {
