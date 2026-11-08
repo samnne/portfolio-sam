@@ -9,6 +9,9 @@ export default defineConfig({
     // Automatically generate .br (Brotli) or .gz (Gzip) files
     tailwindcss()
   ],
+  preview: {
+    allowedHosts: ['.up.railway.app', 'samechefu.com', '.samechefu.com'],
+  },
   build: {
     // Minify code using Esbuild (fastest and highly efficient)
     minify: 'esbuild',
@@ -16,6 +19,7 @@ export default defineConfig({
     esbuild: {
       drop: ['console', 'debugger'],
     },
+
     rollupOptions: {
       output: {
         manualChunks(id) {
