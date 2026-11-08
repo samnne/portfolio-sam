@@ -92,7 +92,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
     return createPortal(
         <LazyMotion features={domAnimation} strict>
             <m.div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-5"
+                className="fixed  inset-0 z-50 flex items-center justify-center bg-black/70 px-5"
                 onClick={onClose}
                 variants={backdropVariants}
                 initial="hidden"
@@ -105,7 +105,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
                     aria-labelledby="work-modal-title"
                     onClick={e => e.stopPropagation()}
                     variants={panelVariants}
-                    className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-black border border-white/20 p-5 font-google"
+                    className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-black border border-white/20 p-5 font-inter"
                 >
                     <m.div variants={itemVariants} className="flex justify-between items-start gap-4">
                         <div className="flex gap-2">
