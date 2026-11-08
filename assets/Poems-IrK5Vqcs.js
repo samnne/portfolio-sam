@@ -1,4 +1,4 @@
-import{j as e}from"./vendor-Bn2MyfqS.js";import{F as s}from"./Footer-BO6MdpCh.js";const o=[{title:"The Effort it takes to talk",body:`A rushing bee
+import{j as e}from"./vendor-DfDndEmu.js";import{F as s}from"./Footer-B0ydktde.js";const o=[{title:"The Effort it takes to talk",body:`A rushing bee
 Focused to leave,
 a compelling action,
 creates an addictive breath
