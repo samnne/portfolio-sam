@@ -1,5 +1,3 @@
-import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
-
 
 const Footer = () => {
   const tidbits = [

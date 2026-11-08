@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Footer from '../sections-v2/Footer.tsx'
 
 const Divider = () => <div className="h-px w-full self-center bg-white/20 my-6"></div>

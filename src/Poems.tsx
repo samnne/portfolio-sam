@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { poems } from '../constants/poems.ts'
 import Footer from '../sections-v2/Footer.tsx'
 

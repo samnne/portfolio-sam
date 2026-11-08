@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import type { ProjectCard as ProjectCardType } from '../types/global.js'
 import { ProjectCards } from '../constants/constants.ts'
 import WorkCard from '../components/WorkCard.tsx'

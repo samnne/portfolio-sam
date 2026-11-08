@@ -1,5 +1,3 @@
-import React from 'react'
-
 type Course = { code: string; name: string }
 type CourseGroup = { category: string; courses: Course[] }
 

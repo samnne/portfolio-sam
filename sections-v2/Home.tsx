@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { FaArrowRight } from 'react-icons/fa'
+import { useEffect, useState } from 'react'
+
 import { CiLocationOn } from "react-icons/ci"
-import { IoMdArrowBack, IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io';
+import { IoMdArrowDropright } from 'react-icons/io';
 const Home = () => {
 
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -116,7 +116,7 @@ const Home = () => {
           creative <a href="/works" className="text-sm text-accent transition-all hover:underline cursor-pointer"
           >works</a> and <a href="/papers" className="text-sm text-accent transition-all hover:underline cursor-pointer"
           >past assignments</a> that I'm proud of.
-          
+
         </p>
       </section>
 

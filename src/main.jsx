@@ -1,11 +1,11 @@
-import { StrictMode } from "react";
+import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router"
-import App from "./App.jsx";
-import Works from "./Poems.tsx";
-import Learning from "./Learning.tsx";
-import Papers from "./Papers.tsx";
 
+const App = lazy(() => import("./App.jsx"));
+const Works = lazy(() => import("./Poems.tsx"));
+const Learning = lazy(() => import("./Learning.tsx"));
+const Papers = lazy(() => import("./Papers.tsx"));
 
 
 

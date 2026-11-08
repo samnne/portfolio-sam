@@ -1,25 +1,26 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/react-refresh';
-import compression from 'vite-plugin-compression2';
+import react from '@vitejs/plugin-react';
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   plugins: [
     react(),
-    
-    compression({ algorithm: 'brotliCompress', exclude: [/\.(br|gz)$/] })
+    // Automatically generate .br (Brotli) or .gz (Gzip) files
+    tailwindcss()
   ],
   build: {
-   
+    // Minify code using Esbuild (fastest and highly efficient)
     minify: 'esbuild',
+    // Remove console logs and debuggers in production to save bytes
     esbuild: {
       drop: ['console', 'debugger'],
     },
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Group all node_modules (including React) into a single vendor chunk
           if (id.includes('node_modules')) {
-            if (id.includes('react')) return 'vendor-react';
-            return 'vendor'; 
+            return 'vendor';
           }
         },
       },
