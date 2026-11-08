@@ -31,7 +31,7 @@
   }
 }
 body {
-  @apply bg-background text-text-primary 
+  @apply bg-black text-text-primary 
 }
 html {
   scroll-behavior: smooth;
@@ -51,6 +51,9 @@ html {
   }
   .sidebar-tooltip-to-top {
     @apply absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all bottom-6 duration-100 scale-0 origin-bottom;
+  }
+  .link {
+    @apply text-sm justify-center items-center flex hover:text-accent transition-all hover:underline cursor-pointer
   }
 }
 .description::-webkit-scrollbar {

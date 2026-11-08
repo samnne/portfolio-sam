@@ -221,8 +221,7 @@ const Skills = () => {
                             <li key={`${u.kind}-${u.name}`}>
                               <a
                                 href={u.href}
-                                className="flex items-center gap-2 border border-accent text-accent px-3 py-1.5 text-sm rounded-md hover:bg-accent hover:text-background focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-all duration-300"
-                              >
+                                className="flex items-center gap-2 border border-accent text-accent px-3 py-1.5 text-sm rounded-md hover:bg-accent hover:text-background focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-all duration-300" target="_blank" rel="noopener noreferrer">
                                 <span className="text-[10px] tracking-widest uppercase opacity-60">
                                   {u.kind === "work" ? "Work" : "Project"}
                                 </span>

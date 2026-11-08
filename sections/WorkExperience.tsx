@@ -66,8 +66,8 @@ const WorkExperience = () => {
             key={job.company}
             className="w-full border border-white/10 bg-white/5"
           >
-            <a href={job.link} target="_blank" rel="noreferrer">
-              <motion.div className="whole-card cursor-pointer overflow-hidden">
+            <a href={job.link} target="_blank" rel="noopener noreferrer">
+              <motion.div className="whole-card cursor-pointer ">
                 <div className="flex relative flex-col w-full">
                   {/* Image */}
                   <motion.img

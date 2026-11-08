@@ -71,8 +71,7 @@ const About = () => {
             <div className="navbar-icon group">
               <a
                 href="https://www.linkedin.com/in/samuel-echefu-251a21336/"
-                target="none"
-              >
+                target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-linkedin"></i>
               </a>
               <span className="sidebar-tooltip group-hover:scale-100">
@@ -80,7 +79,7 @@ const About = () => {
               </span>
             </div>
             <div className="navbar-icon group">
-              <a href="https://github.com/samnne" target="none">
+              <a href="https://github.com/samnne" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
               <span className="sidebar-tooltip group-hover:scale-100">
@@ -88,7 +87,7 @@ const About = () => {
               </span>
             </div>
             <div className="navbar-icon group">
-              <a href="mailto:samuel.n.echefu@gmail.com">@</a>
+              <a href="mailto:samuel.n.echefu@gmail.com" target="_blank" rel="noopener noreferrer">@</a>
               <span className="sidebar-tooltip group-hover:scale-100">
                 Email
               </span>

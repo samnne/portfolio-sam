@@ -10,9 +10,12 @@ import survey_parser from "../src/assets/survey_parser.png";
 import proper_seer from "../src/assets/proper_seer.png";
 import ssi from "../src/assets/ssi.png";
 import aeternum from "../src/assets/aeternum.png";
+import uvsdlogo from "../src/assets/uvsdlogo.jpeg";
 import benny from "../src/assets/benny.png";
 import type { CodingLanguage } from "../types/global";
-import type { EducationItem, ProjectCard } from "../types/global.js";
+import type { EducationItem, Job, ProjectCard } from "../types/global.js";
+
+
 const navLinks: NavLink[] = [
   {
     label: "Home",
@@ -188,11 +191,12 @@ const ProjectCards: ProjectCard[] = [
     name: "MarketQuad",
     description:
       "A secure, student-only marketplace built for the University of Victoria community. MarketQuad enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer transactions on campus. ",
+    simpleSummary: "A verified, student-only marketplace.",
     code: [
-      "React Native",
-      "Expo",
       "Next.js",
+      "React Native",
       "TypeScript",
+      "Expo",
       "GitHub",
       "Cloudinary",
       "Prisma",
@@ -209,13 +213,14 @@ const ProjectCards: ProjectCard[] = [
     name: "Benny",
     description:
       "A receipt-tracking budgeting app that parses grocery receipts and tracks spending by category. Benny analyzes receipt data to show where your money goes and predicts your total for your next trip, sending the estimate as a notification. Built with Java Spring Boot and the Gemini API for receipt parsing, TypeScript with React Native (Expo) on the frontend, and Firestore for storage.",
+    simpleSummary: "An AI-powered receipt tracker.",
 
     code: [
-      "React Native",
-      "Expo",
+      "Java",
       "TypeScript",
       "SpringBoot",
-      "Java",
+      "React Native",
+      "Expo",
       "Firebase",
       "Google Cloud Platform (GCP)",
       "Zustand",
@@ -230,17 +235,18 @@ const ProjectCards: ProjectCard[] = [
     name: "uEyes",
     description:
       "A real-time assistive vision system designed to improve independence for visually impaired users. uEyes streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural, conversational queries.",
+    simpleSummary: "conversational vision assistant.",
     code: [
       "React",
+      "Python",
+      "Docker",
       "Zustand",
       "FastAPI",
       "Firebase",
-      "Python",
       "GitHub",
       "WebSockets",
       "Google Gemini",
       "Tailwind",
-      "Docker",
     ],
     repo: "https://github.com/samnne/u-eyes",
     website: "",
@@ -249,23 +255,26 @@ const ProjectCards: ProjectCard[] = [
   {
     name: "Simple Shell Interpreter",
     description: `A shell interpreter written in C that runs built-in commands and any program on the user's PATH, with support for background tasks via system calls for process creation. Includes persistent command history across sessions, git support, and custom data structures for tracking background processes and stored commands.`,
-    code: ["C", "System Calls", "Process Management", "Git", "Linux"],
+    simpleSummary: "A C-based Unix shell.",
+    code: ["C", "Process Management", "Linux", "System Calls", , "Git"],
     repo: "https://github.com/samnne/ssi",
     website: "",
     imgURL: ssi,
   },
-  // {
-  //   name: "uBlog",
-  //   description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
-  //   code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS", "GitLab"],
-  //   repo: "https://github.com/samnne/blogging-system",
-  //   website: "",
-  //   imgURL: uBlog,
-  // },
+  {
+    name: "uBlog",
+    description: `A complete CRUD desktop based admin blogging system. Built with Python, PyQt6, with local storage handling. Tested with the Unit Test framework to follow the DAO protocol for best practices.`,
+    code: ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS", "GitLab"],
+    repo: "https://github.com/samnne/blogging-system",
+    website: "",
+    simpleSummary: "An admin CRUD blogging system.",
+    imgURL: uBlog,
+  },
   {
     name: "Survey Parser",
     description: `A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.`,
-    code: ["C", "Memory Management", "Bash", "Git", "Linux", "GitHub"],
+    simpleSummary: "A fast C parser for survey responses.",
+    code: ["C", "Bash", "Linux", "Git", "Linux", "GitHub", "Memory Management"],
     repo: "https://github.com/samnne/survey_parser",
     website: "",
     imgURL: survey_parser,
@@ -303,6 +312,7 @@ const ProjectCards: ProjectCard[] = [
     name: "VST Fingers",
     description:
       "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Using live tracking and gesture recognition, VST Fingers maps finger motion to MIDI/OSC parameters, enabling intuitive, touchless interaction with virtual instruments. ",
+    simpleSummary: "A hand-tracking MIDI controller.",
     code: [
       "Python 3",
       "OpenCV",
@@ -316,42 +326,53 @@ const ProjectCards: ProjectCard[] = [
     imgURL: vstfingers,
   },
 ];
-
 const jobs: Job[] = [
   {
-    company: "Aeternum",
-    role: "Frontend Developer (Riipen)",
+    company: "UVic Satellite Design",
+    role: "Software Engineer",
+    dateRange: "Sep 2026 – Present",
+    logo: uvsdlogo,
+    image: "", 
+    link: "https://home.uvsd.ca/", 
+    bullets: [
+      "Bridged hardware components using a Raspberry Pi to relay SPI telemetry and video packets to a host PC.",
+      "Built a high-speed SPI video pipeline between an nRF5340, a Raspberry Pi, and an output laptop using FreeRTOS, Python, and C to chunk frames and stream them in real time.",
+    ],
+    tags: ["C", "Python", "FreeRTOS", "Raspberry Pi"],
+    simpleSummary: "Built a real-time SPI video pipeline across embedded hardware.",
+    location: "Victoria, BC",
+  },
+  {
+    company: "Aeternum Corp",
+    role: "Software Developer",
     dateRange: "May – Jul 2026",
     image: aeternum,
     link: "https://aeternumproject.com/", // swap in the real link
     bullets: [
-      "Contributed new features to a secure digital legacy platform that lets users create and share moments through photos, documents, and videos with family and friends.",
-      "Implemented a permission-first memory system (Memoria) in TypeScript across a shared codebase, including a typed service layer and Zustand store.",
-      "Built RAG-backed similarity search with a FastAPI and pgvector backend, filtering retrieved chunks by permission scope and relevance.",
-      "Used Figma throughout the design process, adhering to accessibility standards for users with minimal technical literacy.",
+      "Built context-processing logic that structures data into chunks and metadata for an LLM response pipeline.",
+      "Created a dashboard API that batched metric requests, reducing network overhead and cutting latency by 70%.",
+      "Designed a Figma prototype and ported it to a React Native mobile app that displays data and LLM responses, following accessibility standards for users with minimal technical literacy.",
+      "Implemented a permission-first RAG memory system using FastAPI and TypeScript, backed by pgvector similarity search and enforcing a 90% confidence threshold so user data stays safe and relevant per session.",
     ],
-    tags: [
-      "TypeScript",
-      "React Native",
-      "FastAPI",
-      "React",
-      "UI/UX Design",
-      "Figma",
-    ],
+    tags: ["TypeScript", "React Native", "Python", "FastAPI", "Figma"],
+    simpleSummary: "Built a permission-first RAG memory system and a dashboard API.",
+    location: "Edmonton, AB (Remote)",
   },
   {
     company: "ProperSeer",
-    role: "Frontend Intern",
+    role: "Frontend Developer",
     dateRange: "May – Sep 2025",
     image: proper_seer,
     link: "https://www.properseer.com/",
     bullets: [
-      "Collaborated directly with the lead developer to conduct rigorous code analysis, maintaining high-quality standards and modularity across the company's property management code base.",
-      "Engineered responsive, accessible user interfaces using React, Redux, and Bootstrap, which significantly enhanced cross-device usability and workflow efficiency for property managers.",
-      "Bridged frontend components with backend services by handling complex API calls and asynchronous data flows involving SQL Server, C#, and .NET Core.",
-      "Led the development of the Owner's Page, providing property owners with centralized tools to manage tenants.",
+      "Created responsive user interfaces using React, Redux, and Bootstrap, improving cross-device usability.",
+      "Cached expensive operations through memoization and prefetching, improving overall page load time by 20%.",
+      "Developed centralized dashboard views with React and Redux, including the Owner's Page, streamlining property management workflows.",
+      "Connected frontend components to backend services, handling API calls and asynchronous data flows involving SQL Server, C#, and .NET Core.",
     ],
-    tags: ["React", "Redux", "Bootstrap", "C#", ".NET Core", "SQL Server"],
+    tags: ["React", "Redux", "JavaScript", "Bootstrap"],
+    simpleSummary: "Built responsive interfaces that cut page load time by 20%.",
+    location: "Calgary, AB (Remote)",
   },
 ];
 export { navLinks, codingLanguages, ProjectCards, education, jobs };

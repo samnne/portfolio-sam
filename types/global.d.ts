@@ -24,12 +24,26 @@ import { Variants } from "framer-motion";
   credential: string;
 }
 
+type Job = {
+  company: string;
+  role: string;
+  dateRange: string;
+  image: string;
+  link: string;
+  bullets: string[];
+  tags: string[];
+  simpleSummary: string;
+  location: string;
+  logo?: string;
+};
 // Projects
  interface ProjectCard {
   name: string;
   description: string;
+  simpleSummary: string;
   code: string[];
   repo: string;
+  logo?:string;
   website: string;
   imgURL: string;
 }

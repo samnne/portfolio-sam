@@ -154,7 +154,7 @@ const Education = () => {
             <a
               href="https://uvic.ca"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="w-full group"
             >
               <motion.div

@@ -1,15 +1,7 @@
 import "./App.css";
-import {
-  Home,
-  About,
-  Projects,
-  Skills,
-  Nav,
-  Contact,
-  Education,
-} from "../sections/index";
 
-import WorkExperience from "../sections/WorkExperience.tsx";
+import { Home as Home2, WorkExperience as WorkExperience2, Projects as Projects2, Links, Footer, Education } from "../sections-v2/index.ts"
+
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -19,7 +11,28 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <>
-      <main className="bg-black relative overflow-hidden overflow-x-hidden font-google">
+      <main className="max-w-4xl mx-auto relative font-inter">
+        <section className="py-10 px-5 ">
+          <Home2 />
+        </section>
+        <section className="py-10 px-5 ">
+          <WorkExperience2 />
+        </section>
+        <section className="py-10 px-5 ">
+          <Projects2 />
+        </section>
+        <section className="py-10 px-5 ">
+          <Education />
+        </section>
+        <section className="py-10 px-5 ">
+          <Links />
+        </section>
+        {/* Footer */}
+        <section className="py-10 px-5 ">
+          <Footer />
+        </section>
+      </main>
+      {/* <main className="bg-black relative overflow-hidden overflow-x-hidden font-google">
         <section className="py-10 px-5 ">
           <Home />
         </section>
@@ -81,7 +94,7 @@ function App() {
         <p className="text-sm text-md text-white  text-center  pr-2 flex justify-center items-center pt-1">
           &copy; 2026 Samuel Echefu. All Rights Reserved
         </p>
-      </footer>
+      </footer> */}
     </>
   );
 }
