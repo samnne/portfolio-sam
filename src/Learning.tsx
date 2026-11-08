@@ -21,7 +21,7 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> language <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-background/50">
                         picking up go for backend work. concurrency, goroutines, and building small services.
                     </p>
                 </article>
@@ -32,7 +32,7 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> theory <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-background/50">
                        learning about neural networks, generation algorithms, and machine learning in general. 
                     </p>
                 </article>
@@ -46,7 +46,7 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> infrastructure <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-background/50">
                         setting up and self-hosting my own services at home.
                     </p>
                 </article>
@@ -60,7 +60,7 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> creative <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-background/50">
                         learning to make my own tracks, from sound design to arrangement and mixing.
                     </p>
                 </article>
@@ -74,14 +74,14 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> currently <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <a href='https://www.amazon.ca/sunrise-reaping/s?k=sunrise+on+the+reaping' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-white/50">
+                    <a href='https://www.amazon.ca/sunrise-reaping/s?k=sunrise+on+the+reaping' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-background/50">
                         sunrise on the reaping
                     </a>
-                    <p className="text-sm text-white/50">by suzanne collins</p>
-                    <a href='https://www.amazon.ca/Sacred-Balance-25th-Anniversary-Edition/dp/1771649860/ref=asc_df_1771649860?mcid=e8051477ed0c37a5a2f811ba14a9fa92&tag=googleshopc0c-20&linkCode=df0&hvadid=706745562901&hvpos=&hvnetw=g&hvrand=10557732829345566283&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001596&hvtargid=pla-1672640200010&psc=1&hvocijid=10557732829345566283-1771649860-&hvexpln=0&gad_source=1' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-white/50">
+                    <p className="text-sm text-background/50">by suzanne collins</p>
+                    <a href='https://www.amazon.ca/Sacred-Balance-25th-Anniversary-Edition/dp/1771649860/ref=asc_df_1771649860?mcid=e8051477ed0c37a5a2f811ba14a9fa92&tag=googleshopc0c-20&linkCode=df0&hvadid=706745562901&hvpos=&hvnetw=g&hvrand=10557732829345566283&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001596&hvtargid=pla-1672640200010&psc=1&hvocijid=10557732829345566283-1771649860-&hvexpln=0&gad_source=1' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-background/50">
                         the sacred balance
                     </a>
-                    <p className="text-sm text-white/50">by david suzuki</p>
+                    <p className="text-sm text-background/50">by david suzuki</p>
                 </article>
             </section>
             <Footer />

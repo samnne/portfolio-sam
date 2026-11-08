@@ -1,6 +1,12 @@
-
-import { Home as Home2, WorkExperience as WorkExperience2, Projects as Projects2, Links, Footer, Education } from "../sections-v2/index.ts"
-
+import {
+  Home as Home2,
+  WorkExperience as WorkExperience2,
+  Projects as Projects2,
+  Links,
+  Footer,
+  Education,
+  Skills,
+} from "../sections-v2/index.ts";
 
 function App() {
   return (
@@ -19,14 +25,17 @@ function App() {
           <Education />
         </section>
         <section className="py-10 px-5 ">
+          <Skills />
+        </section>
+
+        <section className="py-10 px-5 ">
           <Links />
         </section>
-        {/* Footer */}
+
         <section className="py-10 px-5 ">
           <Footer />
         </section>
       </main>
-     
     </>
   );
 }

@@ -7,6 +7,6 @@ import Education from "./Education.tsx";
 import WorkExperience from "./WorkExperience.tsx";
 
 import Links from "./Links.tsx";
-
-export { Home, Projects, Footer, Education, Links,WorkExperience };
+import Skills from "./Skills.tsx";
+export { Home, Projects,Skills, Footer, Education, Links,WorkExperience };
 

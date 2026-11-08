@@ -6,11 +6,13 @@ const courseworkGroups: CourseGroup[] = [
   {
     category: 'Computer Science',
     courses: [
-      { code: 'CSC 225/226', name: 'Data Structures & Algorithms' },
       { code: 'CSC 360', name: 'Operating Systems' },
       { code: 'SENG 365', name: 'Software Systems Development' },
-      { code: 'SENG 265', name: 'Software Development Methods' },
+      { code: 'SENG 310', name: 'Human Computer Interaction' },
+      { code: 'CSC 305', name: 'Computer Graphics' },
       { code: 'CSC 321', name: 'Introduction to Artificial Intelligence' },
+      { code: 'CSC 225/226', name: 'Data Structures & Algorithms' },
+      { code: 'SENG 265', name: 'Software Development Methods' },
       { code: 'CSC 230', name: 'Computer Architecture' },
     ],
   },
@@ -32,8 +34,8 @@ function CourseGroupRow({ group }: { group: CourseGroup }) {
       <ul className="flex font-bold w-full items-end flex-col gap-2">
         {group.courses.map((course) => (
           <li key={course.code} className="flex flex-col items-end">
-            <span className="text-base">{course.code}</span>
-            <span className="text-sm text-white/40 font-normal lowercase text-end">
+            <span className="text-base text-black">{course.code}</span>
+            <span className="text-sm text-black font-normal lowercase text-end">
               {course.name}
             </span>
           </li>

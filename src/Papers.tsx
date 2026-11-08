@@ -49,7 +49,7 @@ const Papers = () => {
                                     <span className="text-accent font-black">[</span> {paper.course ? `${paper.type} / ${paper.course}` : paper.type} <span className="text-accent font-black">]</span>
                                 </span>
                             </div>
-                            <p className="text-sm text-white/50">{paper.description}</p>
+                            <p className="text-sm text-background/50">{paper.description}</p>
                             <a
                                 href={paper.href}
                                 target="_blank"

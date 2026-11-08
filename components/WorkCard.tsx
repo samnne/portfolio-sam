@@ -92,7 +92,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
     return createPortal(
         <LazyMotion features={domAnimation} strict>
             <m.div
-                className="fixed  inset-0 z-50 flex items-center justify-center bg-black/70 px-5"
+                className="fixed  inset-0 z-50 flex items-center justify-center bg-white/70 px-5"
                 onClick={onClose}
                 variants={backdropVariants}
                 initial="hidden"
@@ -105,7 +105,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
                     aria-labelledby="work-modal-title"
                     onClick={e => e.stopPropagation()}
                     variants={panelVariants}
-                    className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-black border border-white/20 p-5 font-inter"
+                    className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-white border border-white/20 p-5 font-inter"
                 >
                     <m.div variants={itemVariants} className="flex justify-between items-start gap-4">
                         <div className="flex gap-2">
@@ -137,7 +137,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
                     {job && (
                         <m.div
                             variants={itemVariants}
-                            className="flex justify-between text-sm text-white/50 mt-2"
+                            className="flex justify-between text-sm text-background/50 mt-2"
                         >
                             <span>{item.dateRange}</span>
                             <span>{item.location}</span>
@@ -152,7 +152,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
                             src={image}
                             alt={`${title} preview`}
                             decoding="async"
-                            className="w-full max-h-80 object-contain border border-white/20 mb-4"
+                            className="w-full max-h-80 object-contain border border-background/20 mb-4"
                         />
                     )}
 
@@ -168,7 +168,7 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
                     ) : (
                         <m.p
                             variants={itemVariants}
-                            className="text-sm text-white/70 whitespace-pre-line"
+                            className="text-sm text-background/70 whitespace-pre-line"
                         >
                             {item.description}
                         </m.p>

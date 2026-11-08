@@ -122,7 +122,7 @@ const Home = () => {
               {year ? "3rd year" : `${precentUntilCompletion.toFixed(7)}%`}
             </span>
           </div>
-          <div className="w-full h-2  bg-text-primary/50 mt-2">
+          <div className="w-full h-2  bg-background/50 mt-2">
             <div className="h-full bg-accent" style={{ width: `${precentUntilCompletion}%` }}></div>
           </div>
 
@@ -143,7 +143,7 @@ const Home = () => {
             </a>
             , where I build SPI video and telemetry pipelines across embedded hardware.
           </p>
-          <p className="text-white/50">
+          <p className="text-background/50">
             I'm always{" "}
             <a href="/learning" className="text-sm text-accent transition-all hover:underline cursor-pointer">learning</a> and finding ways to be 1% smarter each day. I also have some personal
             creative <a href="/works" className="text-sm text-accent transition-all hover:underline cursor-pointer"

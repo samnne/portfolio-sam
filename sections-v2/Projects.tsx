@@ -21,7 +21,7 @@ function ProjectCard({
     >
       {project.name}
     </button>
-    <span className='text-white/40 text-sm'>{project.simpleSummary}</span>
+    <span className='text-background/40 text-sm'>{project.simpleSummary}</span>
     <div className="flex flex-wrap items-center gap-1 ">
       {project.code.slice(0, 3).map((tag) => (
         <span
@@ -42,7 +42,7 @@ const Projects = () => {
     <LazyMotion features={domAnimation} strict>
       <div className="border-t  border-accent/20">
         <div className="grid sm:grid-cols-3 items-start relative pt-10">
-          <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base"><span className='flex'>{makeTextJitter("Projects", -10)}</span> <span className='text-xs text-white/40 font-light'>click a project name</span></h2>
+          <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base"><span className='flex'>{makeTextJitter("Projects", -10)}</span> <span className='text-xs text-background/40 font-light'>click a project name</span></h2>
           <div className="col-span-2 gap-4 grid sm:grid-cols-2">
             {ProjectCards.map((project) => (
               <ProjectCard
