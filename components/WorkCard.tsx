@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { motion, useReducedMotion } from 'framer-motion'
+import { LazyMotion, domAnimation, m, useReducedMotion } from 'framer-motion'
 import type { Variants } from 'framer-motion'
 import type { Job, ProjectCard } from '../types/global.js'
 
@@ -90,115 +90,126 @@ const WorkCard = ({ item, onClose }: WorkModalProps) => {
 
     // portal so the sticky/grid ancestors on the page can't clip or offset the overlay
     return createPortal(
-        <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-5"
-            onClick={onClose}
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-        >
-            <motion.div
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="work-modal-title"
-                onClick={e => e.stopPropagation()}
-                variants={panelVariants}
-                className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-black border border-white/20 p-5 font-google"
+        <LazyMotion features={domAnimation} strict>
+            <m.div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-5"
+                onClick={onClose}
+                variants={backdropVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
             >
-                <motion.div variants={itemVariants} className="flex justify-between items-start gap-4">
-                    <div className='flex gap-2'>
-                        {item.logo && <img className='w-15 h-15 rounded-sm' src={item.logo} alt='logo' />}
-                        <div>
-
-                            <h2 id="work-modal-title" className="text-2xl font-bold">{title}</h2>
-                            {subtitle && <p className="text-sm mt-1">{subtitle}</p>}
-                        </div>
-                    </div>
-                    <button
-                        ref={closeRef}
-                        type="button"
-                        onClick={onClose}
-                        className="link font-light"
-                    >
-                        close
-                    </button>
-                </motion.div>
-
-                {job && (
-                    <motion.div
-                        variants={itemVariants}
-                        className="flex justify-between text-sm text-white/50 mt-2"
-                    >
-                        <span>{item.dateRange}</span>
-                        <span>{item.location}</span>
-                    </motion.div>
-                )}
-
-                <Divider />
-
-                {image && (
-                    <motion.img
-                        variants={itemVariants}
-                        src={image}
-                        alt={`${title} preview`}
-                        className="w-full max-h-80 object-contain border border-white/20 mb-4"
-                    />
-                )}
-
-                {job ? (
-                    <motion.ul
-                        variants={listVariants}
-                        className="flex flex-col gap-2 text-sm list-disc pl-5"
-                    >
-                        {item.bullets.map((bullet, i) => (
-                            <motion.li key={i} variants={itemVariants}>{bullet}</motion.li>
-                        ))}
-                    </motion.ul>
-                ) : (
-                    <motion.p
-                        variants={itemVariants}
-                        className="text-sm text-white/70 whitespace-pre-line"
-                    >
-                        {item.description}
-                    </motion.p>
-                )}
-
-                <motion.div
-                    variants={listVariants}
-                    className="flex flex-wrap items-center gap-1 mt-4"
+                <m.div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="work-modal-title"
+                    onClick={e => e.stopPropagation()}
+                    variants={panelVariants}
+                    className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-black border border-white/20 p-5 font-google"
                 >
-                    {tags.map(tag => (
-                        <motion.span
-                            key={tag}
-                            variants={itemVariants}
-                            className="font-bold bg-white text-black p-1 text-xs"
+                    <m.div variants={itemVariants} className="flex justify-between items-start gap-4">
+                        <div className="flex gap-2">
+                            {item.logo && (
+                                <img
+                                    className="w-15 h-15 rounded-sm"
+                                    src={item.logo}
+                                    alt=""
+                                    width={60}
+                                    height={60}
+                                    decoding="async"
+                                />
+                            )}
+                            <div>
+                                <h2 id="work-modal-title" className="text-2xl font-bold">{title}</h2>
+                                {subtitle && <p className="text-sm mt-1">{subtitle}</p>}
+                            </div>
+                        </div>
+                        <button
+                            ref={closeRef}
+                            type="button"
+                            onClick={onClose}
+                            className="link font-light"
                         >
-                            {tag}
-                        </motion.span>
-                    ))}
-                </motion.div>
+                            close
+                        </button>
+                    </m.div>
 
-                {links.length > 0 && (
-                    <>
-                        <Divider />
-                        <motion.div variants={itemVariants} className="flex gap-4 text-sm">
-                            {links.map(l => (
-                                <a
-                                    key={l.label}
-                                    href={l.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="link"
-                                >
-                                    {l.label}
-                                </a>
+                    {job && (
+                        <m.div
+                            variants={itemVariants}
+                            className="flex justify-between text-sm text-white/50 mt-2"
+                        >
+                            <span>{item.dateRange}</span>
+                            <span>{item.location}</span>
+                        </m.div>
+                    )}
+
+                    <Divider />
+
+                    {image && (
+                        <m.img
+                            variants={itemVariants}
+                            src={image}
+                            alt={`${title} preview`}
+                            decoding="async"
+                            className="w-full max-h-80 object-contain border border-white/20 mb-4"
+                        />
+                    )}
+
+                    {job ? (
+                        <m.ul
+                            variants={listVariants}
+                            className="flex flex-col gap-2 text-sm list-disc pl-5"
+                        >
+                            {item.bullets.map((bullet, i) => (
+                                <m.li key={i} variants={itemVariants}>{bullet}</m.li>
                             ))}
-                        </motion.div>
-                    </>
-                )}
-            </motion.div>
-        </motion.div>,
+                        </m.ul>
+                    ) : (
+                        <m.p
+                            variants={itemVariants}
+                            className="text-sm text-white/70 whitespace-pre-line"
+                        >
+                            {item.description}
+                        </m.p>
+                    )}
+
+                    <m.div
+                        variants={listVariants}
+                        className="flex flex-wrap items-center gap-1 mt-4"
+                    >
+                        {tags.map(tag => (
+                            <m.span
+                                key={tag}
+                                variants={itemVariants}
+                                className="font-bold bg-white text-black p-1 text-xs"
+                            >
+                                {tag}
+                            </m.span>
+                        ))}
+                    </m.div>
+
+                    {links.length > 0 && (
+                        <>
+                            <Divider />
+                            <m.div variants={itemVariants} className="flex gap-4 text-sm">
+                                {links.map(l => (
+                                    <a
+                                        key={l.label}
+                                        href={l.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="link"
+                                    >
+                                        {l.label}
+                                    </a>
+                                ))}
+                            </m.div>
+                        </>
+                    )}
+                </m.div>
+            </m.div>
+        </LazyMotion>,
         document.body
     )
 }
