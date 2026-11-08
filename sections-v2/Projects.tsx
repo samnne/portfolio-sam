@@ -3,7 +3,8 @@ import type { ProjectCard as ProjectCardType } from '../types/global.js'
 import { ProjectCards } from '../constants/constants.ts'
 import { lazy, Suspense } from 'react'
 const WorkCard = lazy(() => import('../components/WorkCard.tsx'))
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, domAnimation, LazyMotion } from "framer-motion"
+import { makeTextJitter } from '../components/TextJitter.tsx'
 function ProjectCard({
   project,
   onOpen,
@@ -38,26 +39,28 @@ const Projects = () => {
   const [selected, setSelected] = useState<ProjectCardType | null>(null)
 
   return (
-    <div className="border-t  border-accent/20">
-      <div className="grid sm:grid-cols-3 items-start relative pt-10">
-        <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base">Projects <span className='text-xs text-white/40 font-light'>click a project name</span></h2>
-        <div className="col-span-2 gap-4 grid sm:grid-cols-2">
-          {ProjectCards.map((project) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-              onOpen={() => setSelected(project)}
-            />
-          ))}
+    <LazyMotion features={domAnimation} strict>
+      <div className="border-t  border-accent/20">
+        <div className="grid sm:grid-cols-3 items-start relative pt-10">
+          <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base"><span className='flex'>{makeTextJitter("Projects", -10)}</span> <span className='text-xs text-white/40 font-light'>click a project name</span></h2>
+          <div className="col-span-2 gap-4 grid sm:grid-cols-2">
+            {ProjectCards.map((project) => (
+              <ProjectCard
+                key={project.name}
+                project={project}
+                onOpen={() => setSelected(project)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
 
-      <Suspense fallback={null}>
-        <AnimatePresence>
-          {selected && <WorkCard key={selected.name} item={selected} onClose={() => setSelected(null)} />}
-        </AnimatePresence>
-      </Suspense>
-    </div>
+        <Suspense fallback={null}>
+          <AnimatePresence>
+            {selected && <WorkCard key={selected.name} item={selected} onClose={() => setSelected(null)} />}
+          </AnimatePresence>
+        </Suspense>
+      </div>
+    </LazyMotion>
   )
 }
 

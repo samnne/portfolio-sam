@@ -32,7 +32,7 @@ const Divider = () => <div className="h-px w-full self-center bg-white/20 my-6">
 
 const Papers = () => {
     return (
-        <main className="max-w-3xl px-5 mx-auto relative p-4 font-inter">
+        <main className="screen">
             <section className='py-5 text-start'>
                 <h1 className='text-4xl mb-8 flex justify-between font-bold'>
                     papers & assignments

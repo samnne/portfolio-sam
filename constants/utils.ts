@@ -44,3 +44,4 @@ export const getSkillUsage = (skill: string): SkillUsage[] => {
 
   return [...work, ...projects];
 };
+

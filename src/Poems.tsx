@@ -6,7 +6,7 @@ const Works = () => {
    
 
     return (
-        <main className="max-w-3xl px-5 mx-auto relative p-4 font-inter">
+        <main className="screen">
             
             <section className='py-5 text-start'>
                 <h1 className='text-4xl mb-8 flex justify-between font-bold'>works written by me <a href="/" className='justify-center items-center font-light link'>home</a></h1>

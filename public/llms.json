@@ -1,102 +1,78 @@
 {
   "name": "Sam Echefu",
-  "title": "CS + Software Systems Student",
-  "age": 19,
-  "year": "2nd Year",
-  "portfolio": "https://samechefu.com",
-  "email": "samuel.n.echefu@gmail.com",
-  "github": "https://github.com/samnne",
-  "summary": "Second-year Computer Science + Software Systems student at the University of Victoria, building applications to foster community and health. Experienced Frontend Intern with a focus on mobile development, health tech, accessibility, and real-time data-driven systems.",
-  "looking_for": [
-    "Software Engineering internships (Fall 2026) with a focus on mobile application development",
-    "Roles in health tech and accessibility-focused software",
-    "Opportunities to build real-time, data-driven systems that impact user decisions"
-  ],
+  "url": "https://samechefu.com",
+  "summary": "Third-year Computer Science student at the University of Victoria, based in Victoria, BC. Builds full stack, mobile, and embedded software. Seeking software engineering internships.",
+  "location": "Victoria, BC, Canada",
   "education": {
-    "institution": "University of Victoria (UVic)",
-    "degree": "B.Sc. Computer Science + Software Systems",
-    "location": "Victoria, BC",
-    "start_year": 2024,
-    "expected_graduation": 2028,
-    "relevant_coursework": {
-      "computer_science": [
-        "CSC 225/226: Data Structures & Algorithms",
-        "CSC 230: Computer Architecture",
-        "SENG 265: Software Development Methods"
-      ],
-      "mathematics": [
-        "MATH 200: Multivariable Calculus",
-        "MATH 204: Differential Equations",
-        "MATH 122: Discrete Math",
-        "MATH 211: Matrix Algebra"
-      ],
-      "statistics": [
-        "STAT 260: Probability & Statistics I"
-      ]
-    }
+    "school": "University of Victoria",
+    "degree": "Bachelor of Science, Computer Science",
+    "start": "2024-09",
+    "expected": "2028-04"
   },
-  "work_experience": [
+  "interests": [
+    "mobile-first development",
+    "accessibility",
+    "health tech",
+    "real-time data systems"
+  ],
+  "experience": [
+    {
+      "company": "UVic Satellite Design",
+      "role": "Software Engineer",
+      "start": "2026-09",
+      "end": null,
+      "location": "Victoria, BC",
+      "summary": "Built an SPI telemetry and video pipeline between an nRF5340, a Raspberry Pi, and a host PC.",
+      "tags": ["C", "Python", "FreeRTOS", "Raspberry Pi"]
+    },
+    {
+      "company": "Aeternum Corp",
+      "role": "Software Developer",
+      "start": "2026-05",
+      "end": "2026-07",
+      "location": "Edmonton, AB (remote)",
+      "summary": "Built a permission-first RAG memory system, a batched dashboard API that cut latency by 70%, and a React Native app.",
+      "tags": ["TypeScript", "React Native", "Python", "FastAPI", "Figma"]
+    },
     {
       "company": "ProperSeer",
-      "role": "Frontend Intern",
-      "period": "May–Sep 2025",
-      "highlights": [
-        "Collaborated with the lead developer to conduct code analysis, maintaining quality and modularity across the property management codebase",
-        "Engineered responsive, accessible UIs using React, Redux, and Bootstrap, enhancing cross-device usability for property managers",
-        "Bridged frontend components with backend services via complex API calls and async data flows with SQL Server, C#, and .NET Core",
-        "Led development of the Owner's Page, providing property owners with centralised tools to manage tenants"
-      ],
-      "stack": ["React", "Redux", "Bootstrap", "C#", ".NET Core", "SQL Server"]
+      "role": "Frontend Developer",
+      "start": "2025-05",
+      "end": "2025-09",
+      "location": "Calgary, AB (remote)",
+      "summary": "Built responsive React and Redux dashboards and improved page load time by 20%.",
+      "tags": ["React", "Redux", "JavaScript", "Bootstrap"]
     }
   ],
   "projects": [
     {
       "name": "MarketQuad",
-      "description": "A secure, student-only marketplace for the University of Victoria community. Enforces verified access to eliminate spam and unsafe interactions, enabling trusted peer-to-peer campus transactions. Full-stack production system handling authentication, real-time interactions, and scalable data management.",
-      "focus": ["community", "security", "full-stack", "mobile"],
-      "stack": ["React Native", "Expo", "Next.js", "TypeScript", "Cloudinary", "Prisma", "Supabase", "PostgreSQL"]
+      "url": "https://market-quad.com",
+      "summary": "Student marketplace for UVic with campus-restricted auth and real-time messaging.",
+      "tags": ["Next.js", "React Native", "Supabase", "TypeScript", "Cloudinary"]
+    },
+    {
+      "name": "Benny",
+      "summary": "Receipt parsing and grocery budget tracker using the Gemini API.",
+      "tags": ["React Native", "TypeScript", "Spring Boot", "GCP"]
     },
     {
       "name": "uEyes",
-      "description": "A real-time assistive vision system for visually impaired users. Streams live camera input to an AI model that generates contextual scene descriptions, retains short-term visual memory, and supports natural conversational queries. Built for low-latency communication and stateful context handling.",
-      "focus": ["accessibility", "health tech", "AI", "real-time"],
-      "stack": ["React", "FastAPI", "Firebase", "Python", "WebSockets", "Google Gemini", "Tailwind", "Docker"]
-    },
-    {
-      "name": "uBlog",
-      "description": "A complete CRUD desktop admin blogging system with local storage handling. Tested with the Unit Test framework following DAO protocol for best practices.",
-      "focus": ["desktop", "CRUD", "testing"],
-      "stack": ["Python", "PyQt6", "Unittest", "Git", "Linux", "CSS"]
-    },
-    {
-      "name": "Survey Parser",
-      "description": "A high-performance C-based data parser that processes raw survey data and converts it into structured, analysis-ready datasets using Likert scale normalization.",
-      "focus": ["data processing", "performance", "systems"],
-      "stack": ["C", "Memory Management", "Bash", "Git", "Linux"]
-    },
-    {
-      "name": "TopShop",
-      "description": "A full-stack shopping system with an AI-powered estimation engine that generates real-world price predictions as users build lists. Combines a RESTful backend with dynamic data entry.",
-      "focus": ["full-stack", "AI", "e-commerce"],
-      "stack": ["JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "EJS", "Tailwind CSS", "Google Gemini"]
-    },
-    {
-      "name": "MacBook Redesign",
-      "description": "A pixel-perfect, responsive recreation of Apple's M4 MacBook Pro landing page featuring 3D model rendering with Three.js and scroll-driven animations via GSAP.",
-      "focus": ["frontend", "3D", "animation", "UI/UX"],
-      "stack": ["React", "Three.js", "GSAP", "Tailwind CSS", "WebGL"]
-    },
-    {
-      "name": "VST Fingers",
-      "description": "A real-time computer vision interface that transforms hand movements into expressive control signals for digital audio workstations. Maps finger motion to MIDI/OSC parameters for touchless interaction with virtual instruments. Applications in creative performance, accessibility, and motor rehabilitation.",
-      "focus": ["computer vision", "accessibility", "real-time", "HCI"],
-      "stack": ["Python 3", "OpenCV", "MediaPipe", "OSC", "Max9", "Audio Processing"]
+      "summary": "Google AI Hackathon computer vision app that describes surroundings with audio.",
+      "tags": ["React", "FastAPI", "WebSockets", "Firebase", "GCP"]
     }
   ],
-  "skills": {
-    "languages": ["Python", "TypeScript", "JavaScript", "SQL", "R", "HTML5", "CSS"],
-    "frameworks": ["Next.js", "React", "FastAPI", "Node.js", "Express", "Redux", "Zustand", ".NET Core", "Tailwind", "Bootstrap"],
-    "databases_and_cloud": ["Supabase", "Firebase", "MongoDB", "PostgreSQL", "Cloudinary"],
-    "tools_and_other": ["Docker", "REST APIs", "GitHub", "Socket.IO", "UI/UX Design"]
+  "pages": [
+    { "title": "Home", "url": "https://samechefu.com/" },
+    { "title": "Works", "url": "https://samechefu.com/works" },
+    { "title": "Learning", "url": "https://samechefu.com/learning" },
+    { "title": "Papers", "url": "https://samechefu.com/papers" },
+    { "title": "Poems", "url": "https://samechefu.com/poems" }
+  ],
+  "contact": {
+    "email": "sam@samechefu.com",
+    "github": "https://github.com/samnne",
+    "linkedin": "https://linkedin.com/in/samuel-echefu",
+    "resume": "https://samechefu.com/Samuel_Echefu_Full_Stack_Resume.pdf"
   }
 }

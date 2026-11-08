@@ -5,7 +5,7 @@ import { Home as Home2, WorkExperience as WorkExperience2, Projects as Projects2
 function App() {
   return (
     <>
-      <main className="max-w-4xl mx-auto relative font-inter">
+      <main className="screen">
         <section className="py-10 px-5 ">
           <Home2 />
         </section>

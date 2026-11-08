@@ -5,7 +5,7 @@ const Divider = () => <div className="h-px w-full self-center bg-white/20 my-6">
 
 const Learning = () => {
     return (
-        <main className="max-w-3xl px-5 mx-auto relative p-4 font-inter">
+        <main className="screen">
             <section className='py-5 text-start'>
                 <h1 className='text-4xl mb-8 flex justify-between font-bold'>
                     what i'm currently learning
@@ -74,10 +74,14 @@ const Learning = () => {
                             <span className="text-accent font-black">[</span> currently <span className="text-accent font-black">]</span>
                         </span>
                     </div>
-                    <p className="italic border-l pl-4 text-white/50">
+                    <a href='https://www.amazon.ca/sunrise-reaping/s?k=sunrise+on+the+reaping' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-white/50">
                         sunrise on the reaping
-                    </p>
+                    </a>
                     <p className="text-sm text-white/50">by suzanne collins</p>
+                    <a href='https://www.amazon.ca/Sacred-Balance-25th-Anniversary-Edition/dp/1771649860/ref=asc_df_1771649860?mcid=e8051477ed0c37a5a2f811ba14a9fa92&tag=googleshopc0c-20&linkCode=df0&hvadid=706745562901&hvpos=&hvnetw=g&hvrand=10557732829345566283&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001596&hvtargid=pla-1672640200010&psc=1&hvocijid=10557732829345566283-1771649860-&hvexpln=0&gad_source=1' target='_blank' className="italic  hover:text-accent transition-all hover:underline cursor-pointer border-l pl-4 text-white/50">
+                        the sacred balance
+                    </a>
+                    <p className="text-sm text-white/50">by david suzuki</p>
                 </article>
             </section>
             <Footer />

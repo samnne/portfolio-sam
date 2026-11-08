@@ -1,6 +1,7 @@
+import { domAnimation, LazyMotion, m } from "framer-motion"
+import { makeTextJitter } from "../components/TextJitter.tsx";
 type Course = { code: string; name: string }
 type CourseGroup = { category: string; courses: Course[] }
-
 const courseworkGroups: CourseGroup[] = [
   {
     category: 'Computer Science',
@@ -44,16 +45,19 @@ function CourseGroupRow({ group }: { group: CourseGroup }) {
 
 const Education = () => {
   return (
-    <div id="education" className="border-t border-accent/20">
-      <div className="grid sm:grid-cols-3 items-start relative pt-10">
-        <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase font-black text-base">Education</h2>
-        <div className="col-span-2">
-          {courseworkGroups.map((group) => (
-            <CourseGroupRow key={group.category} group={group} />
-          ))}
+    <LazyMotion features={domAnimation} strict>
+
+      <div id="education" className="border-t border-accent/20">
+        <div className="grid sm:grid-cols-3 items-start relative pt-10">
+          <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase font-black text-base"><span className='flex'>{makeTextJitter("Education", -10)}</span></h2>
+          <div className="col-span-2">
+            {courseworkGroups.map((group) => (
+              <CourseGroupRow key={group.category} group={group} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </LazyMotion>
   )
 }
 
