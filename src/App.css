@@ -40,7 +40,7 @@ body {
 
 body {
   
-  @apply bg-text-primary text-background
+  @apply bg-white text-background
   
 }
 
