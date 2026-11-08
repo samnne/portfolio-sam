@@ -1,4 +1,3 @@
-import "./App.css";
 
 import { Home as Home2, WorkExperience as WorkExperience2, Projects as Projects2, Links, Footer, Education } from "../sections-v2/index.ts"
 

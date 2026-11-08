@@ -1,6 +1,8 @@
+import "./App.css";
+
 import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router"
+import {  BrowserRouter, Navigate, Route, Routes } from "react-router"
 
 const App = lazy(() => import("./App.jsx"));
 const Works = lazy(() => import("./Poems.tsx"));
@@ -11,7 +13,7 @@ const Papers = lazy(() => import("./Papers.tsx"));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.url.BASE_URL}>
       <Routes>
         <Route index element={<App />} />
         <Route path="/works" element={<Works />} />
