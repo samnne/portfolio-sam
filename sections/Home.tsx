@@ -13,7 +13,7 @@ import { useState } from "react";
 const Home = () => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true, amount: 0.5 });
-  const [dir, setDir] = useState(-1)
+  const [dir, setDir] = useState(-1);
   const variants = {
     button: {
       scale: 1.08,
@@ -44,8 +44,8 @@ const Home = () => {
       <div className="flex flex-col  justify-center items-start">
         <h1 className="md:text-6xl  text-4xl font-bold">Hi, I'm Sam!</h1>
         <p className="text-2xl mt-8 font-light  max-sm:text-lg">
-          I am a 19 year old, third year CS + Software Systems student at the
-          University of Victoria. I have previously worked as a Frontend Intern{" "}
+          I am a 19 year old, third year CS + Software Systems student at the University of
+          Victoria. I have previously worked as a Frontend Intern{" "}
           <motion.a
             className="text-accent transition-all underline "
             whileHover={{
@@ -58,13 +58,12 @@ const Home = () => {
 
               bounce: 0.7,
             }}
-            
+
             href="https://aeternumproject.com/"
           >
             @Aeternum
           </motion.a>
-          , tasked with feature implementation and user design. My current
-          project,{" "}
+          , tasked with feature implementation and user design. My current project,{" "}
           <motion.a
             className="text-accent inline-block w-fit h-fit  relative underline transition-all"
             target="_blank"
@@ -83,13 +82,11 @@ const Home = () => {
           >
             MarketQuad
           </motion.a>{" "}
-          is a student marketplace created to provide a safer university-based
-          community to buy and sell second hand items.
+          is a student marketplace created to provide a safer university-based community to buy and
+          sell second hand items.
         </p>
         <div className="flex flex-col max-xl:flex-wrap w-full mt-4 ">
-          <h1 className="text-xl lg:text-4xl text-text-primary font-bold">
-            Currently Looking For
-          </h1>
+          <h1 className="text-xl lg:text-4xl text-text-primary font-bold">Currently Looking For</h1>
           <ul className="list-disc lg:text-xl text-sm pl-12 pt-4 gap-2 flex flex-col">
             {lookingFor.map(({ text }) => {
               return <li key={text}>{text}</li>;
@@ -172,7 +169,7 @@ const Home = () => {
           }}
           whileTap={{
             scale: 1.1,
-            rotateZ: dir * 5
+            rotateZ: dir * 5,
           }}
           animate={{
             x: isInView && [1200, 0],
@@ -182,7 +179,7 @@ const Home = () => {
             type: "spring",
             mass: 0.2,
           }}
-          onClick={()=> setDir(prev => prev * -1)}
+          onClick={() => setDir((prev) => prev * -1)}
           className=" sm:w-100 cursor-pointer active:shadow-2xl transition-shadow active:shadow-accent/50 sm:h-100 h-75 w-75 object-cover border-4  border-accent  rounded-full"
           src={me}
           alt=""

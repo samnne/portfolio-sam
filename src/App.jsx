@@ -19,9 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <>
-      <div className="overflow-x-hidden">{/* <ParralaxScroll /> */}</div>
-      <Nav></Nav>
-      <main className="bg-linear-to-b to-black via-accent/15 from-black relative overflow-hidden overflow-x-hidden font-google">
+      <main className="bg-black relative overflow-hidden overflow-x-hidden font-google">
         <section className="py-10 px-5 ">
           <Home />
         </section>
