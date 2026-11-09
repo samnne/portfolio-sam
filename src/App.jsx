@@ -1,3 +1,4 @@
+import PencilDraw from "../components/PencilDraw.tsx";
 import {
   Home as Home2,
   WorkExperience as WorkExperience2,
@@ -36,6 +37,7 @@ function App() {
           <Footer />
         </section>
       </main>
+      <PencilDraw />
     </>
   );
 }
