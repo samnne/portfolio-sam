@@ -1,10 +1,12 @@
 
+import PencilDraw from '../components/PencilDraw.tsx'
 import Footer from '../sections-v2/Footer.tsx'
 
 const Divider = () => <div className="h-px w-full self-center bg-white/20 my-6"></div>
 
 const Learning = () => {
     return (
+        <>
         <main className="screen">
             <section className='py-5 text-start'>
                 <h1 className='text-4xl mb-8 flex justify-between font-bold'>
@@ -86,6 +88,8 @@ const Learning = () => {
             </section>
             <Footer />
         </main>
+           <PencilDraw />
+        </>
     )
 }
 

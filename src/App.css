@@ -50,7 +50,7 @@ html {
 
 @layer components {
   .screen {
-    @apply max-w-4xl mx-auto relative font-inter z-30
+    @apply max-w-4xl mx-auto relative px-5 font-inter z-30
   }
 
   .button-home {

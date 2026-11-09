@@ -12,6 +12,7 @@ import {
 function App() {
   return (
     <>
+      <PencilDraw />
       <main className="screen">
         <section className="py-10 px-5 ">
           <Home2 />
@@ -37,7 +38,7 @@ function App() {
           <Footer />
         </section>
       </main>
-      <PencilDraw />
+    
     </>
   );
 }
