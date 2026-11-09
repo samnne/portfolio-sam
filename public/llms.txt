@@ -35,4 +35,4 @@ Data and cloud: PostgreSQL, MongoDB, Firebase, Supabase, Google Cloud Platform
 - Email: sam@samechefu.com
 - GitHub: https://github.com/samnne
 - LinkedIn: https://linkedin.com/in/samuel-echefu
-- Resume: https://samechefu.com/Samuel_Echefu_Full_Stack_Resume.pdf
+- Resume: https://samechefu.com/Samuel_Echefu_Software_Developer_Resume.pdf

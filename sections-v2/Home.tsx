@@ -94,7 +94,7 @@ const Home = () => {
             sam@samechefu.com
           </a>
           {" | "}
-          <m.a variants={pVars} whileTap={"tap"} whileHover={"hover"} initial={"rest"} animate="rest" href="/Samuel_Echefu_Full_Stack_Resume.pdf" className="px-1  link" target="_blank" rel="noopener noreferrer">
+          <m.a variants={pVars} whileTap={"tap"} whileHover={"hover"} initial={"rest"} animate="rest" href="/Samuel_Echefu_Software_Developer_Resume.pdf" className="px-1  link" target="_blank" rel="noopener noreferrer">
             resume
             <m.span variants={cVars}  >
               <IoMdArrowDropright />
