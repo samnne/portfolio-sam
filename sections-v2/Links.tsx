@@ -1,5 +1,5 @@
 import { makeTextJitter } from "../components/TextJitter.tsx";
-import {domAnimation, LazyMotion} from "framer-motion"
+import { domAnimation, LazyMotion } from "framer-motion";
 const Links = () => {
   const links = [
     {
