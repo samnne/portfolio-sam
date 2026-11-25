@@ -5,6 +5,7 @@ import type { Job } from "../types/global.js";
 import { jobs } from "../constants/constants.ts";
 import WorkCard from "../components/WorkCard.tsx";
 import { makeTextJitter } from "../components/TextJitter.tsx";
+import { GoArrowUpLeft } from "react-icons/go";
 
 function JobCard({ job, onOpen }: { job: Job; onOpen: () => void }) {
   return (
@@ -18,10 +19,19 @@ function JobCard({ job, onOpen }: { job: Job; onOpen: () => void }) {
           type="button"
           onClick={onOpen}
           aria-haspopup="dialog"
-          className="link text-end justify-end flex w-full"
+          className="font-bold link justify-start text-base"
         >
+          <m.span
+            whileInView={{
+              opacity: [0, 1],
+              y: [40, 0],
+            }}
+          >
+            <GoArrowUpLeft />
+          </m.span>
           {job.role} @ {job.company}
         </button>
+
         <span className="text-sm text-background/40 font-normal lowercase text-end">
           {job.simpleSummary}
         </span>
@@ -48,9 +58,7 @@ const WorkExperience = () => {
       <div className="border-t  border-accent/20">
         <div className="grid sm:grid-cols-3 items-start relative pt-10">
           <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base">
-            <span className="flex ">
-              {makeTextJitter("Experience", -10)}
-            </span>
+            <span className="flex ">{makeTextJitter("Experience", -10)}</span>
             <span className="text-xs text-background/40 font-light">
               click any experience
             </span>

@@ -3,9 +3,16 @@ import type { ProjectCard as ProjectCardType } from "../types/global.js";
 import { ProjectCards } from "../constants/constants.ts";
 import { lazy, Suspense } from "react";
 const WorkCard = lazy(() => import("../components/WorkCard.tsx"));
-import { AnimatePresence, domAnimation, LazyMotion } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
 import { makeTextJitter } from "../components/TextJitter.tsx";
-function ProjectCard({ project, onOpen }: { project: ProjectCardType; onOpen: () => void }) {
+import { GoArrowUpLeft } from "react-icons/go";
+function ProjectCard({
+  project,
+  onOpen,
+}: {
+  project: ProjectCardType;
+  onOpen: () => void;
+}) {
   return (
     <div className="flex flex-col w-full justify-between gap-2 mb-6">
       <button
@@ -14,9 +21,19 @@ function ProjectCard({ project, onOpen }: { project: ProjectCardType; onOpen: ()
         aria-haspopup="dialog"
         className="font-bold link justify-start text-base"
       >
+        <m.span
+          whileInView={{
+            opacity: [0, 1],
+            y: [40, 0],
+          }}
+        >
+          <GoArrowUpLeft />
+        </m.span>
         {project.name}
       </button>
-      <span className="text-background/40 text-sm">{project.simpleSummary}</span>
+      <span className="text-background/40 text-sm">
+        {project.simpleSummary}
+      </span>
       <div className="flex flex-wrap items-center gap-1 ">
         {project.code.slice(0, 3).map((tag) => (
           <span
@@ -40,7 +57,9 @@ const Projects = () => {
         <div className="grid sm:grid-cols-3 items-start relative pt-10">
           <h2 className="text-accent max-sm:pb-5 sm:sticky top-10 uppercase flex flex-col  font-black text-base">
             <span className="flex">{makeTextJitter("Projects", -10)}</span>{" "}
-            <span className="text-xs text-background/40 font-light">click a project name</span>
+            <span className="text-xs text-background/40 font-light">
+              click a project name
+            </span>
           </h2>
           <div className="col-span-2 gap-4 grid sm:grid-cols-2">
             {ProjectCards.map((project) => (
@@ -56,7 +75,11 @@ const Projects = () => {
         <Suspense fallback={null}>
           <AnimatePresence>
             {selected && (
-              <WorkCard key={selected.name} item={selected} onClose={() => setSelected(null)} />
+              <WorkCard
+                key={selected.name}
+                item={selected}
+                onClose={() => setSelected(null)}
+              />
             )}
           </AnimatePresence>
         </Suspense>
@@ -66,4 +89,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

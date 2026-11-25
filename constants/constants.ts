@@ -12,6 +12,8 @@ import ssi from "../src/assets/ssi.png";
 import aeternum from "../src/assets/aeternum.png";
 import uvsdlogo from "../src/assets/uvsdlogo.jpeg";
 import benny from "../src/assets/benny.png";
+import transit_app_png from "../src/assets/utransit.png";
+import morphai_png from "../src/assets/morphdemo.mp4";
 import type { CodingLanguage } from "../types/global";
 import type { EducationItem, Job, ProjectCard } from "../types/global.js";
 
@@ -208,6 +210,26 @@ const ProjectCards: ProjectCard[] = [
     repo: "https://github.com/samnne/marketquad",
     website: "https://market-quad.com",
     imgURL: marketQuadIMG,
+  },
+  {
+    name: "Morph",
+    description:
+      "A terminal-based AI agent harness built with Python and Textual. Morph runs an agentic tool-calling loop through the OpenAI Responses API, renders Markdown conversations, and connects to MCP servers over stdio. It combines discovered MCP tools with five local tools, persistent user memory, workspace switching, and guarded command execution with an executable allowlist, path-traversal checks, timeouts, and output limits.",
+    simpleSummary: "A secure, extensible terminal AI agent.",
+    code: ["Python", "Textual", "asyncio", "MCP", "OpenAI API"],
+    repo: "https://github.com/samnne/morph-ai",
+    website: "",
+    imgURL: morphai_png,
+  },
+  {
+    name: "uTransit",
+    description:
+      "A real-time transit app powered by a Go service that consumes BC Transit GTFS Realtime feeds and decodes Protobuf vehicle positions and trip updates. An in-memory cache and indexed lookups cut API latency from 650 ms to 45 ms; load testing sustained p99 latency under 320 ms with 1,000 simulated users. Its mobile-first React Native frontend batches and memoizes network calls, improving round-trip response time by 25%.",
+    simpleSummary: "Live BC Transit tracking with a fast mobile interface.",
+    code: ["Go", "React Native", "React", "Protobuf", "REST API", "Locust"],
+    repo: "https://github.com/samnne/utransit",
+    website: "",
+    imgURL: transit_app_png,
   },
   {
     name: "Benny",
